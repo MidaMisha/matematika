@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light"><title>Практика №9. Степень с рациональным показателем</title>
+<style>
+:root{--green:#244f43;--bg:#f3f3f0;--line:#deded8;--ink:#202823}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink)}
+.document-nav{max-width:940px;margin:16px auto 0;padding:0 12px;display:flex;gap:18px;flex-wrap:wrap;font:14px/1.5 Arial,sans-serif}
+.document-nav a,.document-footer a{color:var(--green);text-underline-offset:3px}
+.toolbar{max-width:960px;margin:22px auto 0;padding:0 12px;display:flex;justify-content:space-between;gap:10px;align-items:center;font:14px Arial,sans-serif}
+.toolbar .hint{color:#52645b}
+.toolbar button{font:700 14px Arial,sans-serif;background:var(--green);color:#fff;border:0;border-radius:8px;padding:10px 18px;cursor:pointer}
+.toolbar button:focus-visible{outline:3px solid #adbd39;outline-offset:2px}
+.practice-sheet{max-width:940px;width:calc(100% - 24px);margin:12px auto 44px;padding:36px 43px 42px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 26px #10231b0a}
+h1{font:700 26px/1.25 Arial,sans-serif;text-align:center;margin:0 0 13px}
+.lead{font:15px/1.5 Arial,sans-serif;color:#495b52;text-align:center;margin:0 0 15px}
+.notice{font:13.5px/1.5 Arial,sans-serif;color:#40594e;background:#f0f4f1;border-left:3px solid var(--green);padding:10px 13px;margin:0 0 22px}
+section{margin-top:19px}
+h2{display:flex;align-items:center;gap:12px;font:700 17px/1.35 Arial,sans-serif;color:var(--green);margin:0 0 5px;break-after:avoid}
+h2:after{content:"";height:1px;flex:1;background:var(--line)}
+.instruction{font:14px/1.5 Arial,sans-serif;color:#52635a;margin:0 0 10px;break-after:avoid}
+ol{margin:0;padding-left:40px}
+li{font:20px/1.5 'Times New Roman',Times,serif;margin:0;padding:5px 2px 5px 6px;break-inside:avoid;overflow-wrap:normal}
+.two{columns:2;column-gap:29px}
+.two li{break-inside:avoid}
+math{font-family:'Cambria Math','STIX Two Math',serif;font-size:1.07em;vertical-align:middle}
+math mfrac{font-size:0.98em}
+li math{max-width:100%}
+.footer{font:13px Arial,sans-serif;text-align:center;color:#627268;border-top:1px solid var(--line);padding-top:13px;margin-top:28px}
+@media(max-width:700px){.practice-sheet{padding:25px 18px 30px}h1{font-size:22px}.two{columns:1}li{font-size:19px}.toolbar .hint{font-size:12px}}
+@media print{
+ @page{size:A4;margin:12mm 11mm}
+ html,body{background:white!important}
+ .toolbar,.document-nav,.document-footer{display:none!important}
+ .practice-sheet{width:auto!important;max-width:none!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+ h1{font-size:16pt;margin-bottom:2mm}
+ .lead{font-size:9.5pt;margin-bottom:2mm}
+ .notice{font-size:8.8pt;padding:1mm 2mm;margin-bottom:3mm;background:none;border:0;border-bottom:1px solid #aaa}
+ section{margin-top:3.4mm}
+ h2{font-size:10.3pt;margin-bottom:.8mm}
+ .instruction{font-size:9pt;line-height:1.25;margin-bottom:1.5mm}
+ ol{padding-left:11mm}
+ li{font-size:11.8pt;line-height:1.28;padding:1.15mm 0 1.15mm .8mm}
+ math{font-size:1.08em}
+ .two{columns:2;column-gap:8mm}
+ .footer{font-size:8.5pt;margin-top:4mm;padding-top:2mm}
+}
+</style>
+<link href="../reader.css" rel="stylesheet"><script src="../catalog.js" defer=""></script><script src="../document.js" defer=""></script></head><body>
+
+
+<main class="practice-sheet"><h1>Практика №9. Степень с рациональным показателем</h1>
+<p class="lead">Полная практика по лекции · от основных правил до комбинированных заданий</p>
+<p class="notice">Решения записывайте в тетради. Задания можно выполнять по разделам. Если в условии не указано иное, буквенные основания в формулах со степенями положительны. Ответы и решения в этой версии для студентов не приведены.</p>
+<section>
+<h2>1. Повторение: целые степени и корни</h2>
+<p class="instruction">Вычислите. При необходимости разложите число на множители.</p>
+<ol class="two" start="1">
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="2^5"><mrow><msup><mn>2</mn><mn>5</mn></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="3^4"><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="5^3"><mrow><msup><mn>5</mn><mn>3</mn></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="4^4"><mrow><msup><mn>4</mn><mn>4</mn></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="7^0"><mrow><msup><mn>7</mn><mn>0</mn></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="2^{-4}"><mrow><msup><mn>2</mn><mrow><mo>-</mo><mn>4</mn></mrow></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{1}{3}\right)^{-2}"><mrow><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><msup><mo>)</mo><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\sqrt{169}"><mrow><msqrt><mrow><mn>169</mn></mrow></msqrt></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\sqrt[3]{-125}"><mrow><mroot><mrow><mo>-</mo><mn>125</mn></mrow><mn>3</mn></mroot></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\sqrt[4]{625}"><mrow><mroot><mrow><mn>625</mn></mrow><mn>4</mn></mroot></mrow></math></li>
+</ol></section>
+<section>
+<h2>2. Читаем дробный показатель</h2>
+<p class="instruction">Назовите числитель и знаменатель показателя, затем запишите каждую степень через корень.</p>
+<ol class="two" start="11">
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="7^{1/4}"><mrow><msup><mn>7</mn><mfrac><mn>1</mn><mn>4</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="5^{2/3}"><mrow><msup><mn>5</mn><mfrac><mn>2</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="11^{3/5}"><mrow><msup><mn>11</mn><mfrac><mn>3</mn><mn>5</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="a^{4/7}"><mrow><msup><mi>a</mi><mfrac><mn>4</mn><mn>7</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="x^{5/6}"><mrow><msup><mi>x</mi><mfrac><mn>5</mn><mn>6</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="3^{7/2}"><mrow><msup><mn>3</mn><mfrac><mn>7</mn><mn>2</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="b^{-2/5}"><mrow><msup><mi>b</mi><mfrac><mrow><mo>-</mo><mn>2</mn></mrow><mn>5</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="16^{-3/4}"><mrow><msup><mn>16</mn><mfrac><mrow><mo>-</mo><mn>3</mn></mrow><mn>4</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{2}{5}\right)^{3/4}"><mrow><mo>(</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>5</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mn>3</mn><mn>4</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="y^{-7/15}"><mrow><msup><mi>y</mi><mfrac><mrow><mo>-</mo><mn>7</mn></mrow><mn>15</mn></mfrac></msup></mrow></math></li>
+</ol></section>
+<section>
+<h2>3. От корня — к рациональной степени</h2>
+<p class="instruction">Представьте выражение в виде степени с рациональным показателем. В буквенных примерах основания положительны.</p>
+<ol class="two" start="21">
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\sqrt{a}"><mrow><msqrt><mrow><mi>a</mi></mrow></msqrt></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\sqrt[3]{x^2}"><mrow><mroot><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mn>3</mn></mroot></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\sqrt[4]{b^7}"><mrow><mroot><mrow><msup><mi>b</mi><mn>7</mn></msup></mrow><mn>4</mn></mroot></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\sqrt[5]{2^3}"><mrow><mroot><mrow><msup><mn>2</mn><mn>3</mn></msup></mrow><mn>5</mn></mroot></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{1}{\sqrt[3]{a}}"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mroot><mrow><mi>a</mi></mrow><mn>3</mn></mroot></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{1}{\sqrt[7]{x^4}}"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mroot><mrow><msup><mi>x</mi><mn>4</mn></msup></mrow><mn>7</mn></mroot></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\sqrt{a^3}"><mrow><msqrt><mrow><msup><mi>a</mi><mn>3</mn></msup></mrow></msqrt></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\sqrt[6]{b^5}"><mrow><mroot><mrow><msup><mi>b</mi><mn>5</mn></msup></mrow><mn>6</mn></mroot></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{\sqrt[4]{x^3}}{\sqrt[4]{x}}"><mrow><mfrac><mrow><mroot><mrow><msup><mi>x</mi><mn>3</mn></msup></mrow><mn>4</mn></mroot></mrow><mrow><mroot><mrow><mi>x</mi></mrow><mn>4</mn></mroot></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\sqrt[3]{a^2}\cdot\sqrt[3]{a}"><mrow><mroot><mrow><msup><mi>a</mi><mn>2</mn></msup></mrow><mn>3</mn></mroot><mo>·</mo><mroot><mrow><mi>a</mi></mrow><mn>3</mn></mroot></mrow></math></li>
+</ol></section>
+<section>
+<h2>4. Область определения и знак</h2>
+<p class="instruction">Определите, существует ли выражение в действительных числах; для буквенного основания найдите допустимые значения. Записывайте объяснение.</p>
+<ol class="one" start="31">
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="0^{3/4}"><mrow><msup><mn>0</mn><mfrac><mn>3</mn><mn>4</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="0^0"><mrow><msup><mn>0</mn><mn>0</mn></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="0^{-2/5}"><mrow><msup><mn>0</mn><mfrac><mrow><mo>-</mo><mn>2</mn></mrow><mn>5</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="(-8)^{1/3}"><mrow><mo>(</mo><mo>-</mo><mn>8</mn><msup><mo>)</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="(-8)^{2/3}"><mrow><mo>(</mo><mo>-</mo><mn>8</mn><msup><mo>)</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="(-16)^{1/4}"><mrow><mo>(</mo><mo>-</mo><mn>16</mn><msup><mo>)</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\sqrt{(-7)^2}"><mrow><msqrt><mrow><mo>(</mo><mo>-</mo><mn>7</mn><msup><mo>)</mo><mn>2</mn></msup></mrow></msqrt></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\sqrt[3]{-27}"><mrow><mroot><mrow><mo>-</mo><mn>27</mn></mrow><mn>3</mn></mroot></mrow></math></li>
+<li>При каких <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="x"><mrow><mi>x</mi></mrow></math> определено <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="x^{-1/2}"><mrow><msup><mi>x</mi><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup></mrow></math>?</li>
+<li>При каких <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="x"><mrow><mi>x</mi></mrow></math> определено <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(x-4\right)^{1/2}"><mrow><mo>(</mo><mi>x</mi><mo>-</mo><mn>4</mn><msup><mo>)</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></msup></mrow></math>?</li>
+<li>При каких <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="x"><mrow><mi>x</mi></mrow></math> определено <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(x+2\right)^{-1/2}"><mrow><mo>(</mo><mi>x</mi><mo>+</mo><mn>2</mn><msup><mo>)</mo><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup></mrow></math>?</li>
+<li>При каких <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="x"><mrow><mi>x</mi></mrow></math> определено <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(5-x\right)^{1/3}"><mrow><mo>(</mo><mn>5</mn><mo>-</mo><mi>x</mi><msup><mo>)</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow></math>?</li>
+</ol></section>
+<section>
+<h2>5. Применяем свойства степеней</h2>
+<p class="instruction">Упростите: при умножении и делении основание одинаковое, а при возведении степени в степень показатели перемножаются. Здесь <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="a,b,x,y&gt;0"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>&gt;</mo><mn>0</mn></mrow></math>.</p>
+<ol class="two" start="43">
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="a^{1/2}\cdot a^{3/2}"><mrow><msup><mi>a</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mo>·</mo><msup><mi>a</mi><mfrac><mn>3</mn><mn>2</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="x^{5/6}\cdot x^{1/3}"><mrow><msup><mi>x</mi><mfrac><mn>5</mn><mn>6</mn></mfrac></msup><mo>·</mo><msup><mi>x</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="b^{7/4}:b^{3/4}"><mrow><msup><mi>b</mi><mfrac><mn>7</mn><mn>4</mn></mfrac></msup><mo>:</mo><msup><mi>b</mi><mfrac><mn>3</mn><mn>4</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="a^{2/3}:a^{5/3}"><mrow><msup><mi>a</mi><mfrac><mn>2</mn><mn>3</mn></mfrac></msup><mo>:</mo><msup><mi>a</mi><mfrac><mn>5</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(x^{3/5}\right)^5"><mrow><mo>(</mo><msup><mi>x</mi><mfrac><mn>3</mn><mn>5</mn></mfrac></msup><msup><mo>)</mo><mn>5</mn></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(a^{-2/3}\right)^{-3}"><mrow><mo>(</mo><msup><mi>a</mi><mfrac><mrow><mo>-</mo><mn>2</mn></mrow><mn>3</mn></mfrac></msup><msup><mo>)</mo><mrow><mo>-</mo><mn>3</mn></mrow></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(ab\right)^{1/2}"><mrow><mo>(</mo><mi>a</mi><mi>b</mi><msup><mo>)</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(9x^2\right)^{1/2}"><mrow><mo>(</mo><mn>9</mn><msup><mi>x</mi><mn>2</mn></msup><msup><mo>)</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{x}{y}\right)^{3/2}"><mrow><mo>(</mo><mfrac><mrow><mi>x</mi></mrow><mrow><mi>y</mi></mrow></mfrac><msup><mo>)</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{a}{b}\right)^{-1/2}"><mrow><mo>(</mo><mfrac><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></mfrac><msup><mo>)</mo><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="2^{1/3}\cdot2^{2/3}"><mrow><msup><mn>2</mn><mfrac><mn>1</mn><mn>3</mn></mfrac></msup><mo>·</mo><msup><mn>2</mn><mfrac><mn>2</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{5^{7/4}}{5^{3/4}}"><mrow><mfrac><mrow><msup><mn>5</mn><mfrac><mn>7</mn><mn>4</mn></mfrac></msup></mrow><mrow><msup><mn>5</mn><mfrac><mn>3</mn><mn>4</mn></mfrac></msup></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(8^{1/3}\right)^2"><mrow><mo>(</mo><msup><mn>8</mn><mfrac><mn>1</mn><mn>3</mn></mfrac></msup><msup><mo>)</mo><mn>2</mn></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{16}{81}\right)^{1/4}"><mrow><mo>(</mo><mfrac><mrow><mn>16</mn></mrow><mrow><mn>81</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="x^{1/2}\cdot x^{-3/2}"><mrow><msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mo>·</mo><msup><mi>x</mi><mfrac><mrow><mo>-</mo><mn>3</mn></mrow><mn>2</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(a^{2/3}b^{1/2}\right)^6"><mrow><mo>(</mo><msup><mi>a</mi><mfrac><mn>2</mn><mn>3</mn></mfrac></msup><msup><mi>b</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><msup><mo>)</mo><mn>6</mn></msup></mrow></math></li>
+</ol></section>
+<section>
+<h2>6. Вычисление рациональных степеней</h2>
+<p class="instruction">Вычислите точное значение. Для отрицательного показателя сначала можно перейти к обратному числу.</p>
+<ol class="two" start="59">
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="8^{1/3}"><mrow><msup><mn>8</mn><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="32^{1/5}"><mrow><msup><mn>32</mn><mfrac><mn>1</mn><mn>5</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="64^{2/3}"><mrow><msup><mn>64</mn><mfrac><mn>2</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="81^{3/4}"><mrow><msup><mn>81</mn><mfrac><mn>3</mn><mn>4</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="16^{3/4}"><mrow><msup><mn>16</mn><mfrac><mn>3</mn><mn>4</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="243^{2/5}"><mrow><msup><mn>243</mn><mfrac><mn>2</mn><mn>5</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="125^{-2/3}"><mrow><msup><mn>125</mn><mfrac><mrow><mo>-</mo><mn>2</mn></mrow><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="128^{-2/7}"><mrow><msup><mn>128</mn><mfrac><mrow><mo>-</mo><mn>2</mn></mrow><mn>7</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="27^{-1/3}"><mrow><msup><mn>27</mn><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="256^{-3/4}"><mrow><msup><mn>256</mn><mfrac><mrow><mo>-</mo><mn>3</mn></mrow><mn>4</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="36^{1/2}"><mrow><msup><mn>36</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="625^{1/4}"><mrow><msup><mn>625</mn><mfrac><mn>1</mn><mn>4</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="1000^{2/3}"><mrow><msup><mn>1000</mn><mfrac><mn>2</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="49^{-1/2}"><mrow><msup><mn>49</mn><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{1}{16}\right)^{-3/4}"><mrow><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>16</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mrow><mo>-</mo><mn>3</mn></mrow><mn>4</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{8}{27}\right)^{2/3}"><mrow><mo>(</mo><mfrac><mrow><mn>8</mn></mrow><mrow><mn>27</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{1}{32}\right)^{-2/5}"><mrow><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>32</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mrow><mo>-</mo><mn>2</mn></mrow><mn>5</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{27}{64}\right)^{-1/3}"><mrow><mo>(</mo><mfrac><mrow><mn>27</mn></mrow><mrow><mn>64</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>3</mn></mfrac></msup></mrow></math></li>
+</ol></section>
+<section>
+<h2>7. Дробные основания и отрицательные показатели</h2>
+<p class="instruction">Вычислите; ответ представьте обыкновенной дробью или целым числом.</p>
+<ol class="two" start="77">
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{1}{9}\right)^{1/2}"><mrow><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{1}{25}\right)^{-1/2}"><mrow><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>25</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{4}{9}\right)^{3/2}"><mrow><mo>(</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>9</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{9}{16}\right)^{-1/2}"><mrow><mo>(</mo><mfrac><mrow><mn>9</mn></mrow><mrow><mn>16</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{1}{8}\right)^{-2/3}"><mrow><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>8</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mrow><mo>-</mo><mn>2</mn></mrow><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{16}{81}\right)^{3/4}"><mrow><mo>(</mo><mfrac><mrow><mn>16</mn></mrow><mrow><mn>81</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mn>3</mn><mn>4</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{1}{125}\right)^{-1/3}"><mrow><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>125</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{32}{243}\right)^{1/5}"><mrow><mo>(</mo><mfrac><mrow><mn>32</mn></mrow><mrow><mn>243</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mn>1</mn><mn>5</mn></mfrac></msup></mrow></math></li>
+</ol></section>
+<section>
+<h2>8. Упрощение числовых выражений</h2>
+<p class="instruction">Сначала приведите числа к общему основанию либо переведите степени в корни. Покажите промежуточные действия.</p>
+<ol class="two" start="85">
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="2^{1/2}\cdot8^{1/2}"><mrow><msup><mn>2</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mo>·</mo><msup><mn>8</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="27^{1/3}\cdot9^{1/2}"><mrow><msup><mn>27</mn><mfrac><mn>1</mn><mn>3</mn></mfrac></msup><mo>·</mo><msup><mn>9</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="16^{3/4}:8^{2/3}"><mrow><msup><mn>16</mn><mfrac><mn>3</mn><mn>4</mn></mfrac></msup><mo>:</mo><msup><mn>8</mn><mfrac><mn>2</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="125^{2/3}:25^{1/2}"><mrow><msup><mn>125</mn><mfrac><mn>2</mn><mn>3</mn></mfrac></msup><mo>:</mo><msup><mn>25</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="81^{1/4}\cdot27^{1/3}"><mrow><msup><mn>81</mn><mfrac><mn>1</mn><mn>4</mn></mfrac></msup><mo>·</mo><msup><mn>27</mn><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="4^{1/2}+8^{1/3}"><mrow><msup><mn>4</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mo>+</mo><msup><mn>8</mn><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{2^{7/3}}{2^{1/3}\cdot2}"><mrow><mfrac><mrow><msup><mn>2</mn><mfrac><mn>7</mn><mn>3</mn></mfrac></msup></mrow><mrow><msup><mn>2</mn><mfrac><mn>1</mn><mn>3</mn></mfrac></msup><mo>·</mo><mn>2</mn></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{3^{5/2}\cdot3^{-1/2}}{3}"><mrow><mfrac><mrow><msup><mn>3</mn><mfrac><mn>5</mn><mn>2</mn></mfrac></msup><mo>·</mo><msup><mn>3</mn><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\sqrt[4]{40}\cdot2^{1/4}:5^{-3/4}"><mrow><mroot><mrow><mn>40</mn></mrow><mn>4</mn></mroot><mo>·</mo><msup><mn>2</mn><mfrac><mn>1</mn><mn>4</mn></mfrac></msup><mo>:</mo><msup><mn>5</mn><mfrac><mrow><mo>-</mo><mn>3</mn></mrow><mn>4</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{16^{-1/2}\cdot8^{2/3}}{2^{-1}}"><mrow><mfrac><mrow><msup><mn>16</mn><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup><mo>·</mo><msup><mn>8</mn><mfrac><mn>2</mn><mn>3</mn></mfrac></msup></mrow><mrow><msup><mn>2</mn><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mfrac></mrow></math></li>
+</ol></section>
+<section>
+<h2>9. Буквенные выражения и разность квадратов</h2>
+<p class="instruction">Упростите. Если не указано иное, <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="a,b,x,y&gt;0"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>&gt;</mo><mn>0</mn></mrow></math>. Используйте свойства степеней и формулу <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="u^2-v^2=(u-v)(u+v)"><mrow><msup><mi>u</mi><mn>2</mn></msup><mo>-</mo><msup><mi>v</mi><mn>2</mn></msup><mo>=</mo><mo>(</mo><mi>u</mi><mo>-</mo><mi>v</mi><mo>)</mo><mo>(</mo><mi>u</mi><mo>+</mo><mi>v</mi><mo>)</mo></mrow></math>.</p>
+<ol class="one" start="95">
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{x^{5/6}\cdot x^{1/3}}{x^{1/2}}"><mrow><mfrac><mrow><msup><mi>x</mi><mfrac><mn>5</mn><mn>6</mn></mfrac></msup><mo>·</mo><msup><mi>x</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow><mrow><msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{a^{3/4}\cdot a^{-1/2}}{a^{1/4}}"><mrow><mfrac><mrow><msup><mi>a</mi><mfrac><mn>3</mn><mn>4</mn></mfrac></msup><mo>·</mo><msup><mi>a</mi><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup></mrow><mrow><msup><mi>a</mi><mfrac><mn>1</mn><mn>4</mn></mfrac></msup></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(x^{1/2}y^{1/3}\right)^6"><mrow><mo>(</mo><msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><msup><mi>y</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup><msup><mo>)</mo><mn>6</mn></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{a^{2/3}b^{1/2}}{a^{-1/3}b^{-1/2}}"><mrow><mfrac><mrow><msup><mi>a</mi><mfrac><mn>2</mn><mn>3</mn></mfrac></msup><msup><mi>b</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup></mrow><mrow><msup><mi>a</mi><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>3</mn></mfrac></msup><msup><mi>b</mi><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{x^{3/4}-y^{3/4}}{x^{1/4}-y^{1/4}}"><mrow><mfrac><mrow><msup><mi>x</mi><mfrac><mn>3</mn><mn>4</mn></mfrac></msup><mo>-</mo><msup><mi>y</mi><mfrac><mn>3</mn><mn>4</mn></mfrac></msup></mrow><mrow><msup><mi>x</mi><mfrac><mn>1</mn><mn>4</mn></mfrac></msup><mo>-</mo><msup><mi>y</mi><mfrac><mn>1</mn><mn>4</mn></mfrac></msup></mrow></mfrac></mrow></math> при <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="x\ne y"><mrow><mi>x</mi><mo>≠</mo><mi>y</mi></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{a^{1/2}-b^{1/2}}{a^{1/4}+b^{1/4}}"><mrow><mfrac><mrow><msup><mi>a</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mo>-</mo><msup><mi>b</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup></mrow><mrow><msup><mi>a</mi><mfrac><mn>1</mn><mn>4</mn></mfrac></msup><mo>+</mo><msup><mi>b</mi><mfrac><mn>1</mn><mn>4</mn></mfrac></msup></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{x-y}{x^{1/2}+y^{1/2}}"><mrow><mfrac><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mrow><msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mo>+</mo><msup><mi>y</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{a^{1/2}-1}{a^{1/4}-1}"><mrow><mfrac><mrow><msup><mi>a</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mo>-</mo><mn>1</mn></mrow><mrow><msup><mi>a</mi><mfrac><mn>1</mn><mn>4</mn></mfrac></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mrow></math> при <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="a\ne1"><mrow><mi>a</mi><mo>≠</mo><mn>1</mn></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(a^{1/3}-b^{1/3}\right)\left(a^{1/3}+b^{1/3}\right)"><mrow><mo>(</mo><msup><mi>a</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup><mo>-</mo><msup><mi>b</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup><mo>)</mo><mo>(</mo><msup><mi>a</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup><mo>+</mo><msup><mi>b</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup><mo>)</mo></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{x^{1/2}y^{-1/2}}{x^{-1/2}y^{1/2}}"><mrow><mfrac><mrow><msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><msup><mi>y</mi><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup></mrow><mrow><msup><mi>x</mi><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup><msup><mi>y</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(a^{1/2}+b^{1/2}\right)^2"><mrow><mo>(</mo><msup><mi>a</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mo>+</mo><msup><mi>b</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><msup><mo>)</mo><mn>2</mn></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{x^{1/2}+x^{-1/2}}{x^{-1/2}}"><mrow><mfrac><mrow><msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mo>+</mo><msup><mi>x</mi><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup></mrow><mrow><msup><mi>x</mi><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup></mrow></mfrac></mrow></math></li>
+</ol></section>
+<section>
+<h2>10. Сравнение степеней</h2>
+<p class="instruction">Поставьте знак <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="&lt;,&gt;,="><mrow><mo>&lt;</mo><mo>,</mo><mo>&gt;</mo><mo>,</mo><mo>=</mo></mrow></math>. Объясните, сравниваете ли вы основания или показатели и как влияет основание между нулём и единицей.</p>
+<ol class="one" start="107">
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="2^{3/4}\ \square\ 2^{2/3}"><mrow><msup><mn>2</mn><mfrac><mn>3</mn><mn>4</mn></mfrac></msup><mo> </mo><mo>□</mo><mo> </mo><msup><mn>2</mn><mfrac><mn>2</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{1}{2}\right)^{3/4}\ \square\ \left(\frac{1}{2}\right)^{2/3}"><mrow><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mn>3</mn><mn>4</mn></mfrac></msup><mo> </mo><mo>□</mo><mo> </mo><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="5^{-1/2}\ \square\ 5^{-2/3}"><mrow><msup><mn>5</mn><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup><mo> </mo><mo>□</mo><mo> </mo><msup><mn>5</mn><mfrac><mrow><mo>-</mo><mn>2</mn></mrow><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{1}{3}\right)^{-1/2}\ \square\ \left(\frac{1}{3}\right)^{-2/3}"><mrow><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup><mo> </mo><mo>□</mo><mo> </mo><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mrow><mo>-</mo><mn>2</mn></mrow><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="3^{200}\ \square\ 2^{300}"><mrow><msup><mn>3</mn><mrow><mn>200</mn></mrow></msup><mo> </mo><mo>□</mo><mo> </mo><msup><mn>2</mn><mrow><mn>300</mn></mrow></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="4^{3/2}\ \square\ 8^{4/3}"><mrow><msup><mn>4</mn><mfrac><mn>3</mn><mn>2</mn></mfrac></msup><mo> </mo><mo>□</mo><mo> </mo><msup><mn>8</mn><mfrac><mn>4</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="16^{1/4}\ \square\ 27^{1/3}"><mrow><msup><mn>16</mn><mfrac><mn>1</mn><mn>4</mn></mfrac></msup><mo> </mo><mo>□</mo><mo> </mo><msup><mn>27</mn><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="9^{-1/2}\ \square\ 16^{-1/2}"><mrow><msup><mn>9</mn><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup><mo> </mo><mo>□</mo><mo> </mo><msup><mn>16</mn><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{3}{5}\right)^{2/3}\ \square\ \left(\frac{4}{5}\right)^{2/3}"><mrow><mo>(</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>5</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></msup><mo> </mo><mo>□</mo><mo> </mo><mo>(</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>5</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{3}{5}\right)^{-2/3}\ \square\ \left(\frac{4}{5}\right)^{-2/3}"><mrow><mo>(</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>5</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mrow><mo>-</mo><mn>2</mn></mrow><mn>3</mn></mfrac></msup><mo> </mo><mo>□</mo><mo> </mo><mo>(</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>5</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mrow><mo>-</mo><mn>2</mn></mrow><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="7^{1/2}\ \square\ 7^{2/3}"><mrow><msup><mn>7</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mo> </mo><mo>□</mo><mo> </mo><msup><mn>7</mn><mfrac><mn>2</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{1}{4}\right)^2\ \square\ \left(\frac{1}{4}\right)^1"><mrow><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>4</mn></mrow></mfrac><msup><mo>)</mo><mn>2</mn></msup><mo> </mo><mo>□</mo><mo> </mo><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>4</mn></mrow></mfrac><msup><mo>)</mo><mn>1</mn></msup></mrow></math></li>
+</ol></section>
+<section>
+<h2>11. Уберите иррациональность из знаменателя</h2>
+<p class="instruction">Умножьте числитель и знаменатель на подходящий корень либо сопряжённое выражение. В ответе в знаменателе не должно остаться корней.</p>
+<ol class="one" start="119">
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{1}{\sqrt2}"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mn>2</mn></msqrt></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{3}{\sqrt5}"><mrow><mfrac><mrow><mn>3</mn></mrow><mrow><msqrt><mn>5</mn></msqrt></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{1}{\sqrt[3]{2}}"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mroot><mrow><mn>2</mn></mrow><mn>3</mn></mroot></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{1}{\sqrt[5]{3}}"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mroot><mrow><mn>3</mn></mrow><mn>5</mn></mroot></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{2}{\sqrt[4]{5}}"><mrow><mfrac><mrow><mn>2</mn></mrow><mrow><mroot><mrow><mn>5</mn></mrow><mn>4</mn></mroot></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{1}{\sqrt3+1}"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mn>3</mn></msqrt><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{3}{\sqrt5+1}"><mrow><mfrac><mrow><mn>3</mn></mrow><mrow><msqrt><mn>5</mn></msqrt><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{2}{\sqrt7-\sqrt3}"><mrow><mfrac><mrow><mn>2</mn></mrow><mrow><msqrt><mn>7</mn></msqrt><mo>-</mo><msqrt><mn>3</mn></msqrt></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{1}{2-\sqrt3}"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mo>-</mo><msqrt><mn>3</mn></msqrt></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{1}{\sqrt[3]{4}}"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mroot><mrow><mn>4</mn></mrow><mn>3</mn></mroot></mrow></mfrac></mrow></math></li>
+</ol></section>
+<section>
+<h2>12. Найдите ошибку и исправьте</h2>
+<p class="instruction">Каждое равенство ниже записано с ошибкой. Укажите её и запишите верное утверждение.</p>
+<ol class="one" start="129">
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="2^2+2^3=2^5"><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>3</mn></msup><mo>=</mo><msup><mn>2</mn><mn>5</mn></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="a^{1/2}\cdot a^{1/3}=a^{1/5}"><mrow><msup><mi>a</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mo>·</mo><msup><mi>a</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup><mo>=</mo><msup><mi>a</mi><mfrac><mn>1</mn><mn>5</mn></mfrac></msup></mrow></math> при <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="a&gt;0"><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(a^{1/2}\right)^3=a^{1/6}"><mrow><mo>(</mo><msup><mi>a</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><msup><mo>)</mo><mn>3</mn></msup><mo>=</mo><msup><mi>a</mi><mfrac><mn>1</mn><mn>6</mn></mfrac></msup></mrow></math> при <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="a&gt;0"><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="a^{-1/2}=-\sqrt a"><mrow><msup><mi>a</mi><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup><mo>=</mo><mo>-</mo><msqrt><mi>a</mi></msqrt></mrow></math> при <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="a&gt;0"><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\sqrt{(-5)^2}=-5"><mrow><msqrt><mrow><mo>(</mo><mo>-</mo><mn>5</mn><msup><mo>)</mo><mn>2</mn></msup></mrow></msqrt><mo>=</mo><mo>-</mo><mn>5</mn></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="(-16)^{1/2}=4"><mrow><mo>(</mo><mo>-</mo><mn>16</mn><msup><mo>)</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mo>=</mo><mn>4</mn></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{1}{2}\right)^2&gt;\left(\frac{1}{2}\right)^1"><mrow><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><msup><mo>)</mo><mn>2</mn></msup><mo>&gt;</mo><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><msup><mo>)</mo><mn>1</mn></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="0^0=1"><mrow><msup><mn>0</mn><mn>0</mn></msup><mo>=</mo><mn>1</mn></mrow></math></li>
+</ol></section>
+<section>
+<h2>13. Итоговые задания</h2>
+<p class="instruction">В каждом примере соединены несколько приёмов. Решайте по действиям, сохраняя ограничения на переменные.</p>
+<ol class="one" start="137">
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{27^{2/3}\cdot16^{1/2}}{8^{1/3}}"><mrow><mfrac><mrow><msup><mn>27</mn><mfrac><mn>2</mn><mn>3</mn></mfrac></msup><mo>·</mo><msup><mn>16</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></msup></mrow><mrow><msup><mn>8</mn><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{1}{81}\right)^{-3/4}:27^{1/3}"><mrow><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>81</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mrow><mo>-</mo><mn>3</mn></mrow><mn>4</mn></mfrac></msup><mo>:</mo><msup><mn>27</mn><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{a^{3/4}-b^{3/4}}{a^{1/4}-b^{1/4}}"><mrow><mfrac><mrow><msup><mi>a</mi><mfrac><mn>3</mn><mn>4</mn></mfrac></msup><mo>-</mo><msup><mi>b</mi><mfrac><mn>3</mn><mn>4</mn></mfrac></msup></mrow><mrow><msup><mi>a</mi><mfrac><mn>1</mn><mn>4</mn></mfrac></msup><mo>-</mo><msup><mi>b</mi><mfrac><mn>1</mn><mn>4</mn></mfrac></msup></mrow></mfrac></mrow></math> при <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="a,b&gt;0,\ a\ne b"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mo> </mo><mi>a</mi><mo>≠</mo><mi>b</mi></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{x^{1/2}-1}{x^{1/4}-1}+x^{1/4}"><mrow><mfrac><mrow><msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mo>-</mo><mn>1</mn></mrow><mrow><msup><mi>x</mi><mfrac><mn>1</mn><mn>4</mn></mfrac></msup><mo>-</mo><mn>1</mn></mrow></mfrac><mo>+</mo><msup><mi>x</mi><mfrac><mn>1</mn><mn>4</mn></mfrac></msup></mrow></math> при <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="x&gt;0,\ x\ne1"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mo> </mo><mi>x</mi><mo>≠</mo><mn>1</mn></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{2}{\sqrt5-1}-\frac{2}{\sqrt5+1}"><mrow><mfrac><mrow><mn>2</mn></mrow><mrow><msqrt><mn>5</mn></msqrt><mo>-</mo><mn>1</mn></mrow></mfrac><mo>-</mo><mfrac><mrow><mn>2</mn></mrow><mrow><msqrt><mn>5</mn></msqrt><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{\sqrt[3]{54}}{\sqrt[3]{2}}+16^{3/4}"><mrow><mfrac><mrow><mroot><mrow><mn>54</mn></mrow><mn>3</mn></mroot></mrow><mrow><mroot><mrow><mn>2</mn></mrow><mn>3</mn></mroot></mrow></mfrac><mo>+</mo><msup><mn>16</mn><mfrac><mn>3</mn><mn>4</mn></mfrac></msup></mrow></math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\left(\frac{16}{81}\right)^{-3/4}\cdot\left(\frac{2}{3}\right)^3"><mrow><mo>(</mo><mfrac><mrow><mn>16</mn></mrow><mrow><mn>81</mn></mrow></mfrac><msup><mo>)</mo><mfrac><mrow><mo>-</mo><mn>3</mn></mrow><mn>4</mn></mfrac></msup><mo>·</mo><mo>(</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>3</mn></mrow></mfrac><msup><mo>)</mo><mn>3</mn></msup></mrow></math></li>
+<li>При каких <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="x"><mrow><mi>x</mi></mrow></math> определено <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="\frac{1}{\sqrt{x-3}}"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mi>x</mi><mo>-</mo><mn>3</mn></mrow></msqrt></mrow></mfrac></mrow></math>?</li>
+</ol></section>
+<p class="footer">Практика №9 · Степень с рациональным показателем · Всего 144 задания</p></main></body></html>
