@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Решение иррациональных уравнений и неравенств</title>
+<style>
+:root{
+  --bg:#f3f3f0;
+  --paper:#fff;
+  --accent:#244f43;
+  --text:#191b19;
+  --muted:#626862;
+  --line:#deded8;
+  --soft:#f6f8f6;
+  --warn:#fff8e8;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+}
+.toolbar{
+  max-width:920px;
+  margin:16px auto 0;
+  padding:0 12px;
+  display:flex;
+  justify-content:flex-end;
+}
+.toolbar button{
+  border:0;
+  border-radius:8px;
+  background:var(--accent);
+  color:#fff;
+  padding:10px 16px;
+  font-size:15px;
+  cursor:pointer;
+}
+.lesson{
+  max-width:920px;
+  margin:12px auto 32px;
+  background:var(--paper);
+  padding:36px 46px 44px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  box-shadow:0 8px 28px rgba(0,0,0,.05);
+}
+.kicker{
+  margin:0 0 8px;
+  color:var(--accent);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.08em;
+}
+h1{
+  margin:0 0 10px;
+  font-size:31px;
+  line-height:1.15;
+}
+.lead{
+  margin:0 0 22px;
+  color:var(--muted);
+  font-size:17px;
+  line-height:1.5;
+}
+h2{
+  margin:30px 0 12px;
+  padding-bottom:7px;
+  border-bottom:2px solid var(--accent);
+  font-size:22px;
+}
+h3{
+  margin:20px 0 8px;
+  color:var(--accent);
+  font-size:18px;
+}
+p,li{
+  font-family:"Times New Roman",Times,serif;
+  font-size:18px;
+  line-height:1.48;
+}
+ul,ol{padding-left:26px}
+.formula{
+  margin:12px 0;
+  padding:12px 15px;
+  border-left:4px solid var(--accent);
+  background:var(--soft);
+  font-family:"Times New Roman",Times,serif;
+  font-size:19px;
+  line-height:1.55;
+}
+.rule{
+  margin:14px 0;
+  padding:13px 15px;
+  background:var(--soft);
+  border:1px solid var(--line);
+  border-radius:8px;
+}
+.rule strong{
+  color:var(--accent);
+}
+.example{
+  margin:14px 0;
+  padding:14px 16px;
+  border:1px solid var(--line);
+  border-radius:9px;
+}
+.example-title{
+  margin:0 0 8px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:15px;
+  font-weight:700;
+  color:var(--accent);
+}
+.step{
+  margin:5px 0;
+}
+.answer{
+  margin-top:9px;
+  font-weight:700;
+}
+.warning{
+  margin:15px 0;
+  padding:13px 15px;
+  background:var(--warn);
+  border:1px solid #ead9a5;
+  border-radius:8px;
+}
+.table-wrap{
+  overflow-x:auto;
+  margin:14px 0;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-family:"Times New Roman",Times,serif;
+  font-size:17px;
+}
+th,td{
+  border:1px solid var(--line);
+  padding:9px 10px;
+  vertical-align:top;
+}
+th{
+  background:var(--soft);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:14px;
+  text-align:left;
+}
+.frac{
+  display:inline-flex;
+  flex-direction:column;
+  vertical-align:middle;
+  text-align:center;
+  line-height:1.05;
+  margin:0 .08em;
+}
+.frac .top{border-bottom:1px solid currentColor;padding:0 .14em .05em}
+.frac .bottom{padding:.05em .14em 0}
+.exam{
+  margin-top:18px;
+  padding:17px 18px;
+  border:2px solid var(--accent);
+  border-radius:10px;
+}
+.checklist{
+  background:var(--soft);
+  border-radius:9px;
+  padding:10px 16px;
+}
+.compact p{margin:5px 0}
+@media(max-width:700px){
+  .lesson{
+    margin:8px;
+    padding:24px 18px 30px;
+    border-radius:8px;
+  }
+  h1{font-size:27px}
+  h2{font-size:21px}
+  p,li{font-size:18px}
+  .formula{font-size:18px}
+}
+@media print{
+  @page{size:A4;margin:14mm 13mm}
+  body{background:#fff}
+  .toolbar{display:none}
+  .lesson{
+    max-width:none;
+    margin:0;
+    padding:0;
+    border:0;
+    box-shadow:none;
+  }
+  h1{font-size:25px}
+  h2{
+    font-size:19px;
+    margin-top:20px;
+    break-after:avoid;
+  }
+  h3{font-size:16px;break-after:avoid}
+  p,li{font-size:13.5px;line-height:1.35}
+  .lead{font-size:14px}
+  .formula{font-size:14px;break-inside:avoid}
+  .example,.rule,.warning,.exam{break-inside:avoid}
+  table{font-size:12.5px}
+}
+</style>
+<link href="../reader.css" rel="stylesheet"><script src="../catalog.js" defer=""></script><script src="../document.js" defer=""></script></head>
+<body>
+
+
+<main class="lesson">
+<p class="kicker">МАТЕМАТИКА · 1 КУРС · КОНСПЕКТ</p>
+<h1>Решение иррациональных уравнений и неравенств</h1>
+<p class="lead">Главная цель темы — научиться правильно избавляться от корней, не получать лишние корни и уверенно решать типовые задания экзамена.</p>
+
+<section>
+<h2>1. Что называется иррациональным уравнением</h2>
+<p><strong>Иррациональное уравнение</strong> — это уравнение, в котором неизвестная находится под знаком корня или в дробной степени.</p>
+
+<div class="formula">
+√(x + 5) = x − 1<br>
+∛(2x − 3) = 5<br>
+⁴√x + ⁸√x = 2
+</div>
+
+<p>Основная идея решения: <strong>избавиться от корня</strong>. Для квадратного, четвёртого и других корней чётной степени обязательно учитывают область допустимых значений и знак правой части.</p>
+
+<div class="warning">
+<strong>Важно.</strong> Возведение обеих частей уравнения в квадрат может дать <strong>посторонние корни</strong>. Поэтому либо заранее выписываем условия равносильности, либо обязательно проверяем найденные значения в исходном уравнении.
+</div>
+</section>
+
+<section>
+<h2>2. Что нужно помнить о корнях</h2>
+
+<div class="table-wrap">
+<table>
+<tbody><tr><th>Выражение</th><th>Условие</th></tr>
+<tr><td>√A</td><td>A ≥ 0</td></tr>
+<tr><td><span class="frac"><span class="top">1</span><span class="bottom">√A</span></span></td><td>A &gt; 0</td></tr>
+<tr><td>⁴√A, ⁶√A и т. д.</td><td>A ≥ 0</td></tr>
+<tr><td>∛A, ⁵√A и другие корни нечётной степени</td><td>A может быть любым действительным числом</td></tr>
+</tbody></table>
+</div>
+
+<p>Корень чётной степени всегда принимает <strong>неотрицательное значение</strong>:</p>
+<div class="formula">√A ≥ 0, если A ≥ 0.</div>
+
+<p>Именно поэтому из уравнения √A = B следует, что обязательно <strong>B ≥ 0</strong>.</p>
+</section>
+
+<section>
+<h2>3. Главный тип: √A = B</h2>
+
+<div class="rule">
+<strong>Алгоритм:</strong>
+<ol>
+<li>Потребовать B ≥ 0.</li>
+<li>Возвести обе части в квадрат.</li>
+<li>Решить полученное уравнение.</li>
+<li>Проверить условия и ответ.</li>
+</ol>
+</div>
+
+<div class="formula">
+√A = B &nbsp; ⇔ &nbsp;
+A = B², &nbsp; B ≥ 0.
+</div>
+
+<div class="example">
+<p class="example-title">Пример 1</p>
+<p class="step">Решить: √(x + 1) = x − 1.</p>
+<p class="step"><strong>1.</strong> Правая часть должна быть неотрицательной:</p>
+<p class="step">x − 1 ≥ 0 ⇒ x ≥ 1.</p>
+<p class="step"><strong>2.</strong> Возводим в квадрат:</p>
+<p class="step">x + 1 = (x − 1)².</p>
+<p class="step">x + 1 = x² − 2x + 1.</p>
+<p class="step">x² − 3x = 0.</p>
+<p class="step">x(x − 3) = 0.</p>
+<p class="step">x = 0 или x = 3.</p>
+<p class="step"><strong>3.</strong> Условию x ≥ 1 подходит только x = 3.</p>
+<p class="answer">Ответ: 3.</p>
+</div>
+</section>
+
+<section>
+<h2>4. Если корни стоят в обеих частях</h2>
+
+<h3>Тип √A = √B</h3>
+<p>Оба выражения должны существовать, после чего можно сравнить подкоренные выражения:</p>
+
+<div class="formula">
+√A = √B &nbsp; ⇔ &nbsp; A = B, при A ≥ 0 и B ≥ 0.
+</div>
+
+<div class="example">
+<p class="example-title">Пример 2</p>
+<p>√(2x + 3) = √(x + 8)</p>
+<p>2x + 3 = x + 8 ⇒ x = 5.</p>
+<p>Проверка ОДЗ: обе части определены.</p>
+<p class="answer">Ответ: 5.</p>
+</div>
+</section>
+
+<section>
+<h2>5. Уравнения, где приходится возводить в квадрат два раза</h2>
+
+<p>Если в уравнении несколько квадратных корней, один корень обычно <strong>изолируют</strong>, затем возводят в квадрат. Если корень остался — повторяют.</p>
+
+<div class="example">
+<p class="example-title">Пример 3</p>
+<p>√(x + 4) + √x = 4.</p>
+<p><strong>ОДЗ:</strong> x ≥ 0.</p>
+<p>Оставим один корень слева:</p>
+<p>√(x + 4) = 4 − √x.</p>
+<p>Правая часть должна быть ≥ 0.</p>
+<p>Возводим в квадрат:</p>
+<p>x + 4 = 16 − 8√x + x.</p>
+<p>8√x = 12.</p>
+<p>√x = <span class="frac"><span class="top">3</span><span class="bottom">2</span></span>.</p>
+<p>x = <span class="frac"><span class="top">9</span><span class="bottom">4</span></span>.</p>
+<p>Проверка показывает, что значение подходит.</p>
+<p class="answer">Ответ: 9/4.</p>
+</div>
+</section>
+
+<section>
+<h2>6. Корни разных степеней. Замена переменной</h2>
+
+<p>Если встречаются степени или корни, связанные между собой, часто удобно ввести новую переменную.</p>
+
+<div class="rule">
+Если одновременно есть ⁴√x и ⁸√x, удобно положить
+<strong>t = ⁸√x</strong>. Тогда t ≥ 0, а ⁴√x = t².
+</div>
+
+<p>После замены получается обычное квадратное уравнение. В конце обязательно возвращаемся к переменной x.</p>
+</section>
+
+<section>
+<h2>7. Корни нечётной степени</h2>
+
+<p>Для кубического, пятого и других корней нечётной степени ситуация проще: их подкоренное выражение может быть отрицательным.</p>
+
+<div class="formula">
+∛A = B &nbsp; ⇔ &nbsp; A = B³.
+</div>
+
+<div class="example">
+<p class="example-title">Пример 4</p>
+<p>∛(2x − 1) = 3.</p>
+<p>2x − 1 = 27.</p>
+<p>2x = 28.</p>
+<p class="answer">x = 14.</p>
+</div>
+</section>
+
+<section>
+<h2>8. Иррациональные неравенства</h2>
+
+<p>В неравенствах главная сложность — нельзя просто возвести обе части в квадрат, не посмотрев на их знаки.</p>
+
+<h3>Тип √A ≤ B</h3>
+<div class="formula">
+√A ≤ B &nbsp; ⇔ &nbsp;
+A ≥ 0, &nbsp; B ≥ 0, &nbsp; A ≤ B².
+</div>
+
+<h3>Тип √A &lt; B</h3>
+<div class="formula">
+√A &lt; B &nbsp; ⇔ &nbsp;
+A ≥ 0, &nbsp; B &gt; 0, &nbsp; A &lt; B².
+</div>
+
+<div class="example">
+<p class="example-title">Пример 5</p>
+<p>√(x + 1) ≤ 3.</p>
+<p>ОДЗ: x + 1 ≥ 0 ⇒ x ≥ −1.</p>
+<p>Правая часть положительна, поэтому возводим в квадрат:</p>
+<p>x + 1 ≤ 9 ⇒ x ≤ 8.</p>
+<p>Пересекаем условия:</p>
+<p class="answer">Ответ: [−1; 8].</p>
+</div>
+</section>
+
+<section>
+<h2>9. Неравенства √A &gt; B и √A ≥ B</h2>
+
+<p>Здесь удобно рассматривать знак правой части.</p>
+
+<div class="rule compact">
+<p><strong>Если B &lt; 0</strong>, то √A ≥ 0 автоматически больше B. Остаётся только ОДЗ.</p>
+<p><strong>Если B ≥ 0</strong>, можно возвести обе части в квадрат и сравнить A и B².</p>
+</div>
+
+<div class="example">
+<p class="example-title">Пример 6</p>
+<p>√(2x − 1) &gt; x − 2.</p>
+<p><strong>ОДЗ:</strong> 2x − 1 ≥ 0 ⇒ x ≥ 1/2.</p>
+
+<p><strong>1 случай:</strong> x − 2 &lt; 0 ⇒ x &lt; 2.</p>
+<p>Тогда неравенство выполняется автоматически:</p>
+<p>x ∈ [1/2; 2).</p>
+
+<p><strong>2 случай:</strong> x − 2 ≥ 0 ⇒ x ≥ 2.</p>
+<p>Возводим в квадрат:</p>
+<p>2x − 1 &gt; (x − 2)².</p>
+<p>2x − 1 &gt; x² − 4x + 4.</p>
+<p>x² − 6x + 5 &lt; 0.</p>
+<p>(x − 1)(x − 5) &lt; 0.</p>
+<p>1 &lt; x &lt; 5.</p>
+<p>С учётом x ≥ 2 получаем [2; 5).</p>
+
+<p>Объединяем два случая.</p>
+<p class="answer">Ответ: [1/2; 5).</p>
+</div>
+</section>
+
+<section>
+<h2>10. Сравнение двух корней</h2>
+
+<p>Если обе части — квадратные корни, они неотрицательны. После ОДЗ можно сравнивать подкоренные выражения.</p>
+
+<div class="formula">
+√A ≤ √B &nbsp; ⇔ &nbsp; A ≤ B, при A ≥ 0 и B ≥ 0.
+</div>
+
+<div class="example">
+<p class="example-title">Пример 7</p>
+<p>√(x + 3) ≥ √(2x − 1).</p>
+<p>ОДЗ: x + 3 ≥ 0 и 2x − 1 ≥ 0 ⇒ x ≥ 1/2.</p>
+<p>Сравниваем подкоренные выражения:</p>
+<p>x + 3 ≥ 2x − 1.</p>
+<p>x ≤ 4.</p>
+<p class="answer">Ответ: [1/2; 4].</p>
+</div>
+</section>
+
+<section>
+<h2>11. Частые ошибки</h2>
+<ul>
+<li><strong>Забыли ОДЗ.</strong> Например, √(x − 2) существует только при x ≥ 2.</li>
+<li><strong>Не проверили знак правой части.</strong> Уравнение √A = B не имеет решений там, где B &lt; 0.</li>
+<li><strong>После возведения в квадрат приняли все корни.</strong> Квадратирование может дать посторонний корень.</li>
+<li><strong>Неправильно возвели двучлен в квадрат:</strong> (a − b)² = a² − 2ab + b².</li>
+<li><strong>Забыли вернуться к x после замены</strong> t = ⁸√x.</li>
+<li><strong>В неравенстве возвели в квадрат части неизвестного знака.</strong></li>
+</ul>
+</section>
+
+<section>
+<h2>12. Короткая памятка-алгоритм</h2>
+<div class="checklist">
+<ol>
+<li>Найти <strong>ОДЗ</strong>.</li>
+<li>Изолировать один корень.</li>
+<li>Проверить знак второй части, если корень чётной степени.</li>
+<li>Возвести обе части в нужную степень.</li>
+<li>Решить полученное рациональное уравнение или неравенство.</li>
+<li>Если корень остался — повторить.</li>
+<li>Проверить найденные корни в исходном уравнении.</li>
+<li>Записать окончательный ответ.</li>
+</ol>
+</div>
+</section>
+
+<section>
+<h2>13. Задание из экзамена</h2>
+
+<div class="exam">
+<p class="example-title">а) Решить уравнение</p>
+<div class="formula">√(34 − 3x) = x − 2.</div>
+
+<p><strong>Шаг 1. Условия.</strong></p>
+<p>Так как квадратный корень неотрицателен, правая часть должна быть неотрицательной:</p>
+<p>x − 2 ≥ 0 ⇒ x ≥ 2.</p>
+<p>Также 34 − 3x ≥ 0 ⇒ x ≤ 34/3.</p>
+
+<p><strong>Шаг 2. Возводим в квадрат:</strong></p>
+<p>34 − 3x = (x − 2)².</p>
+<p>34 − 3x = x² − 4x + 4.</p>
+<p>x² − x − 30 = 0.</p>
+<p>(x − 6)(x + 5) = 0.</p>
+<p>x = 6 или x = −5.</p>
+
+<p><strong>Шаг 3. Отбор.</strong></p>
+<p>x = −5 не подходит условию x ≥ 2.</p>
+<p>Проверка x = 6:</p>
+<p>√(34 − 18) = 6 − 2 ⇒ √16 = 4 ⇒ 4 = 4.</p>
+
+<p class="answer">Ответ: x = 6.</p>
+</div>
+
+<div class="exam">
+<p class="example-title">б) Решить уравнение</p>
+<div class="formula">⁴√x + ⁸√x − 2 = 0.</div>
+
+<p><strong>Шаг 1. ОДЗ:</strong> x ≥ 0.</p>
+
+<p><strong>Шаг 2. Замена переменной.</strong></p>
+<p>Пусть t = ⁸√x. Тогда t ≥ 0.</p>
+<p>Так как ⁴√x = (⁸√x)², получаем:</p>
+<p>t² + t − 2 = 0.</p>
+
+<p><strong>Шаг 3. Решаем квадратное уравнение:</strong></p>
+<p>(t − 1)(t + 2) = 0.</p>
+<p>t = 1 или t = −2.</p>
+
+<p>Но t ≥ 0, поэтому t = −2 не подходит.</p>
+
+<p><strong>Шаг 4. Возвращаемся к x:</strong></p>
+<p>⁸√x = 1 ⇒ x = 1.</p>
+
+<p>Проверка:</p>
+<p>⁴√1 + ⁸√1 − 2 = 1 + 1 − 2 = 0.</p>
+
+<p class="answer">Ответ: x = 1.</p>
+</div>
+</section>
+
+<section>
+<h2>14. Что обязательно уметь к экзамену</h2>
+<ul>
+<li>находить ОДЗ выражений с корнями;</li>
+<li>решать уравнения вида √A = B;</li>
+<li>решать уравнения с двумя квадратными корнями;</li>
+<li>использовать замену переменной для корней разных степеней;</li>
+<li>решать простейшие иррациональные неравенства;</li>
+<li>правильно учитывать знак правой части;</li>
+<li>проверять корни после возведения в квадрат.</li>
+</ul>
+</section>
+
+</main>
+
+</body></html>
