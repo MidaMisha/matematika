@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Показательные уравнения. Основные методы решения</title>
+<link rel="stylesheet" href="../reader.css">
+<script src="../catalog.js" defer></script>
+<script src="../document.js" defer></script>
+<style>
+.method{margin:18px 0;padding:14px 18px;border:1px solid #deded8;border-radius:8px}.method h3{margin:0 0 8px;color:#244f43;font:700 17px Arial}.step{margin:6px 0}.answer{font-weight:700}.compact td:first-child{white-space:nowrap}.memory{padding:14px 18px;background:#f1f5f2;border-left:3px solid #244f43}
+</style>
+</head>
+<body>
+<main class="lesson">
+<p class="kicker">МАТЕМАТИКА · 1 КУРС · КОНСПЕКТ</p>
+<h1>Показательные уравнения</h1>
+<p>Показательным называется уравнение, в котором неизвестная находится в показателе степени. Главная идея решения: преобразовать степени к удобному виду, а затем применить один из типовых методов.</p>
+
+<section>
+<h2>1. Равенство степеней с одинаковым основанием</h2>
+<div class="formula">Если <i>a</i> &gt; 0, <i>a</i> ≠ 1 и <i>a</i><sup><i>f</i>(<i>x</i>)</sup> = <i>a</i><sup><i>g</i>(<i>x</i>)</sup>, то <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>).</div>
+<div class="example"><strong>Пример 1.</strong> Решить 5<sup>2<i>x</i>−1</sup> = 5<sup><i>x</i>+3</sup>.<br>Уравниваем показатели: 2<i>x</i> − 1 = <i>x</i> + 3, откуда <i>x</i> = 4.<br><span class="answer">Ответ: 4.</span></div>
+<div class="warning">Уравнивать показатели можно только после того, как основания степеней стали одинаковыми.</div>
+</section>
+
+<section>
+<h2>2. Приведение к одному основанию</h2>
+<p>Числа часто можно представить степенями одного основания:</p>
+<div class="formula">4 = 2<sup>2</sup>, 8 = 2<sup>3</sup>, 16 = 2<sup>4</sup>; &nbsp; 9 = 3<sup>2</sup>, 27 = 3<sup>3</sup>, 81 = 3<sup>4</sup>.</div>
+<div class="example"><strong>Пример 2.</strong> 4<sup><i>x</i>+1</sup> = 8<sup>2<i>x</i>−1</sup>.<br>2<sup>2(<i>x</i>+1)</sup> = 2<sup>3(2<i>x</i>−1)</sup>.<br>2<i>x</i> + 2 = 6<i>x</i> − 3, поэтому 4<i>x</i> = 5 и <i>x</i> = 5/4.<br><span class="answer">Ответ: 5/4.</span></div>
+</section>
+
+<section>
+<h2>3. Вынесение общего множителя</h2>
+<p>Если показатели отличаются на постоянное число, одну степень удобно выразить через другую.</p>
+<div class="example"><strong>Пример 3.</strong> 3<sup><i>x</i>+1</sup> + 3<sup><i>x</i></sup> = 108.<br>3 · 3<sup><i>x</i></sup> + 3<sup><i>x</i></sup> = 108.<br>4 · 3<sup><i>x</i></sup> = 108, поэтому 3<sup><i>x</i></sup> = 27 = 3<sup>3</sup>.<br><span class="answer">Ответ: 3.</span></div>
+</section>
+
+<section>
+<h2>4. Замена переменной</h2>
+<p>Если в уравнении встречаются <i>a</i><sup>2<i>x</i></sup>, <i>a</i><sup><i>x</i></sup> и число, вводят замену <i>t</i> = <i>a</i><sup><i>x</i></sup>. При этом обязательно <i>t</i> &gt; 0.</p>
+<div class="example"><strong>Пример 4.</strong> 4<sup><i>x</i></sup> − 5 · 2<sup><i>x</i></sup> + 4 = 0.<br>Пусть <i>t</i> = 2<sup><i>x</i></sup>, <i>t</i> &gt; 0. Тогда 4<sup><i>x</i></sup> = 2<sup>2<i>x</i></sup> = <i>t</i><sup>2</sup>.<br><i>t</i><sup>2</sup> − 5<i>t</i> + 4 = 0; <i>t</i> = 1 или <i>t</i> = 4.<br>2<sup><i>x</i></sup> = 1 ⇒ <i>x</i> = 0; &nbsp; 2<sup><i>x</i></sup> = 4 ⇒ <i>x</i> = 2.<br><span class="answer">Ответ: 0; 2.</span></div>
+</section>
+
+<section>
+<h2>5. Деление на положительное выражение</h2>
+<p>Степень с положительным основанием всегда положительна, поэтому на неё можно делить обе части уравнения.</p>
+<div class="example"><strong>Пример 5.</strong> 2 · 9<sup><i>x</i></sup> − 5 · 6<sup><i>x</i></sup> + 3 · 4<sup><i>x</i></sup> = 0.<br>Делим на 4<sup><i>x</i></sup> &gt; 0:<br>2(9/4)<sup><i>x</i></sup> − 5(3/2)<sup><i>x</i></sup> + 3 = 0.<br>Пусть <i>t</i> = (3/2)<sup><i>x</i></sup>. Тогда 2<i>t</i><sup>2</sup> − 5<i>t</i> + 3 = 0.<br><i>t</i> = 1 или <i>t</i> = 3/2. Получаем <i>x</i> = 0 или <i>x</i> = 1.<br><span class="answer">Ответ: 0; 1.</span></div>
+</section>
+
+<section>
+<h2>6. Функционально-графический метод</h2>
+<p>Если одна часть уравнения возрастает, а другая убывает, то уравнение имеет не более одного корня. Найденный подбором корень в таком случае является единственным.</p>
+<div class="example"><strong>Пример 6.</strong> 2<sup><i>x</i></sup> = 3 − <i>x</i>.<br>Левая часть возрастает, правая убывает. При <i>x</i> = 1 получаем 2 = 2. Следовательно, других корней нет.<br><span class="answer">Ответ: 1.</span></div>
+</section>
+
+<section>
+<h2>7. Как выбрать метод</h2>
+<div class="table-wrap"><table class="compact">
+<tr><th>Вид уравнения</th><th>Что делать</th></tr>
+<tr><td><i>a</i><sup><i>f</i>(<i>x</i>)</sup> = <i>a</i><sup><i>g</i>(<i>x</i>)</sup></td><td>Уравнять показатели</td></tr>
+<tr><td>Основания 4, 8, 16 или 9, 27, 81</td><td>Привести к основанию 2 или 3</td></tr>
+<tr><td><i>a</i><sup><i>x</i>+1</sup> + <i>a</i><sup><i>x</i></sup></td><td>Вынести <i>a</i><sup><i>x</i></sup></td></tr>
+<tr><td><i>a</i><sup>2<i>x</i></sup> и <i>a</i><sup><i>x</i></sup></td><td>Ввести <i>t</i> = <i>a</i><sup><i>x</i></sup>, <i>t</i> &gt; 0</td></tr>
+<tr><td>Разные основания в однородной форме</td><td>Разделить на одну из положительных степеней</td></tr>
+<tr><td>Одна часть растёт, другая убывает</td><td>Подбор корня и доказательство единственности</td></tr>
+</table></div>
+</section>
+
+<section>
+<h2>8. Проверочный алгоритм</h2>
+<div class="memory"><ol>
+<li>Упростить степени и дроби.</li>
+<li>Попробовать привести всё к одному основанию.</li>
+<li>Проверить, можно ли вынести общую степень.</li>
+<li>Если есть квадрат относительно <i>a</i><sup><i>x</i></sup>, выполнить замену.</li>
+<li>Отбросить значения замены, не удовлетворяющие условию <i>t</i> &gt; 0.</li>
+<li>Вернуться к переменной <i>x</i> и проверить результат.</li>
+</ol></div>
+</section>
+</main>
+</body>
+</html>

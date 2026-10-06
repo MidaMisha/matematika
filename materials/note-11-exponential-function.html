@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Степень с произвольным действительным показателем. Показательная функция</title>
+<link rel="stylesheet" href="../reader.css">
+<script src="../catalog.js" defer></script>
+<script src="../document.js" defer></script>
+<style>
+:root{--bg:#f3f3f0;--paper:#fff;--accent:#244f43;--text:#191b19;--muted:#626862;--line:#deded8;--soft:#f6f8f6;--warn:#fff8e8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+.toolbar{max-width:920px;margin:16px auto 0;padding:0 12px;text-align:right}
+button{border:0;border-radius:8px;background:var(--accent);color:#fff;padding:10px 17px;font-size:15px;cursor:pointer}
+.lesson{max-width:920px;margin:12px auto 32px;background:var(--paper);padding:36px 46px 44px;border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 28px rgba(0,0,0,.05)}
+.kicker{margin:0 0 8px;color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.08em}
+h1{margin:0 0 10px;font-size:30px;line-height:1.16}
+.lead{margin:0 0 22px;color:var(--muted);font-size:17px;line-height:1.5}
+h2{margin:30px 0 12px;padding-bottom:7px;border-bottom:2px solid var(--accent);font-size:22px}
+h3{margin:20px 0 8px;color:var(--accent);font-size:18px}
+p,li{font-family:"Times New Roman",Times,serif;font-size:18px;line-height:1.48}
+ul,ol{padding-left:26px}
+.formula{margin:12px 0;padding:12px 15px;border-left:4px solid var(--accent);background:var(--soft);font-family:"Times New Roman",Times,serif;font-size:20px;line-height:1.55}
+.rule{margin:14px 0;padding:13px 15px;background:var(--soft);border:1px solid var(--line);border-radius:8px}
+.warning{margin:15px 0;padding:13px 15px;background:var(--warn);border:1px solid #ead9a5;border-radius:8px}
+.example{margin:14px 0;padding:14px 16px;border:1px solid var(--line);border-radius:9px}
+.example-title{margin:0 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;color:var(--accent)}
+.answer{font-weight:700}
+.table-wrap{overflow-x:auto;margin:14px 0}
+table{width:100%;border-collapse:collapse;font-family:"Times New Roman",Times,serif;font-size:17px}
+th,td{border:1px solid var(--line);padding:9px 10px;vertical-align:top}
+th{background:var(--soft);font-family:Arial,Helvetica,sans-serif;font-size:14px;text-align:left}
+.graphs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+.graph-card{border:1px solid var(--line);border-radius:10px;padding:12px;background:#fff}
+.graph-title{text-align:center;color:var(--accent);font-weight:700;margin-bottom:6px;font-size:15px}
+.graph-note{margin:6px 0 0;text-align:center;color:var(--muted);font-size:13px;font-family:Arial,Helvetica,sans-serif}
+svg{width:100%;height:auto;display:block}
+.axis{stroke:#555;stroke-width:1.4}.grid{stroke:#e4e4df;stroke-width:1}.curve{fill:none;stroke:#244f43;stroke-width:3}.tick{font:12px Arial;fill:#555}.point{fill:#244f43}
+.apps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:15px 0}
+.app{border:1px solid var(--line);border-radius:9px;padding:13px;background:var(--soft)}
+.app strong{display:block;color:var(--accent);margin-bottom:5px}
+.app p{margin:4px 0;font-size:16px}
+.checklist{background:var(--soft);border-radius:9px;padding:10px 16px}
+@media(max-width:720px){.lesson{margin:8px;padding:24px 18px 30px;border-radius:8px}h1{font-size:26px}h2{font-size:21px}p,li{font-size:18px}.graphs,.apps{grid-template-columns:1fr}}
+@media print{@page{size:A4;margin:14mm 13mm}body{background:#fff}.toolbar{display:none}.lesson{max-width:none;margin:0;padding:0;border:0;box-shadow:none}h1{font-size:24px}h2{font-size:18.5px;margin-top:19px;break-after:avoid}h3{font-size:15px;break-after:avoid}p,li{font-size:13.2px;line-height:1.32}.lead{font-size:13.5px}.formula{font-size:14px;padding:8px 11px;break-inside:avoid}.rule,.warning,.example,.graph-card,.app{break-inside:avoid}table{font-size:12.2px}.graphs{gap:10px}.apps{gap:8px}.app{padding:9px}.app p{font-size:12px}}
+</style>
+</head>
+<body>
+<main class="lesson">
+<p class="kicker">МАТЕМАТИКА · 1 КУРС · КОНСПЕКТ</p>
+<h1>Степень с произвольным действительным показателем. Показательная функция</h1>
+<p class="lead">Расширяем понятие степени на любой действительный показатель, знакомимся с функцией y = a<sup>x</sup>, её графиком, свойствами и простейшими применениями.</p>
+
+<section>
+<h2>1. Степень с произвольным действительным показателем</h2>
+<p>Ранее мы использовали натуральные, целые и рациональные показатели:</p>
+<div class="formula">a<sup>3</sup>, &nbsp; a<sup>−2</sup>, &nbsp; a<sup>2/3</sup>, &nbsp; a<sup>−5/4</sup>.</div>
+<p>Теперь показатель степени может быть любым действительным числом, например:</p>
+<div class="formula">2<sup>√2</sup>, &nbsp; 5<sup>π</sup>, &nbsp; 10<sup>−√3</sup>.</div>
+<p>При <strong>a &gt; 0</strong> выражение a<sup>x</sup> определено для любого действительного x. Для иррационального x его значение получают как естественное продолжение степеней с рациональными показателями.</p>
+<div class="warning"><strong>Важно:</strong> основание берут положительным. При отрицательном основании степень a<sup>x</sup> определена не для всех действительных x.</div>
+</section>
+
+<section>
+<h2>2. Свойства степеней</h2>
+<p>При a &gt; 0 и любых действительных x и y сохраняются привычные свойства:</p>
+<div class="formula">
+a<sup>x</sup> · a<sup>y</sup> = a<sup>x+y</sup><br>
+a<sup>x</sup> : a<sup>y</sup> = a<sup>x−y</sup><br>
+(a<sup>x</sup>)<sup>y</sup> = a<sup>xy</sup><br>
+(ab)<sup>x</sup> = a<sup>x</sup>b<sup>x</sup>
+</div>
+<p>Также a<sup>0</sup> = 1 и a<sup>−x</sup> = 1/a<sup>x</sup>.</p>
+</section>
+
+<section>
+<h2>3. Определение показательной функции</h2>
+<p><strong>Показательной функцией</strong> называется функция</p>
+<div class="formula">y = a<sup>x</sup>,</div>
+<p>где</p>
+<div class="formula">a &gt; 0, &nbsp; a ≠ 1.</div>
+<p>Число a называется <strong>основанием</strong>, а переменная x находится в показателе степени.</p>
+<div class="rule">Примеры: y = 2<sup>x</sup>, y = 5<sup>x</sup>, y = (1/2)<sup>x</sup>.</div>
+</section>
+
+<section>
+<h2>4. Основные свойства показательной функции</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Свойство</th><th>Результат</th></tr>
+<tr><td>Область определения</td><td>x ∈ ℝ</td></tr>
+<tr><td>Область значений</td><td>y &gt; 0</td></tr>
+<tr><td>Точка на графике</td><td>(0; 1), потому что a<sup>0</sup> = 1</td></tr>
+<tr><td>Нули функции</td><td>нет</td></tr>
+<tr><td>Если a &gt; 1</td><td>функция возрастает</td></tr>
+<tr><td>Если 0 &lt; a &lt; 1</td><td>функция убывает</td></tr>
+</table>
+</div>
+</section>
+
+<section>
+<h2>5. График показательной функции</h2>
+<p>Все графики y = a<sup>x</sup> проходят через точку <strong>(0; 1)</strong> и целиком расположены выше оси Ox.</p>
+
+<div class="graphs">
+<div class="graph-card">
+<div class="graph-title">y = 2ˣ, a &gt; 1</div>
+<svg viewBox="0 0 330 220" aria-label="График y равно 2 в степени x">
+<line class="grid" x1="35" y1="40" x2="315" y2="40"/><line class="grid" x1="35" y1="80" x2="315" y2="80"/><line class="grid" x1="35" y1="120" x2="315" y2="120"/><line class="grid" x1="35" y1="160" x2="315" y2="160"/>
+<line class="grid" x1="75" y1="20" x2="75" y2="195"/><line class="grid" x1="125" y1="20" x2="125" y2="195"/><line class="grid" x1="175" y1="20" x2="175" y2="195"/><line class="grid" x1="225" y1="20" x2="225" y2="195"/><line class="grid" x1="275" y1="20" x2="275" y2="195"/>
+<line class="axis" x1="35" y1="180" x2="315" y2="180"/><line class="axis" x1="175" y1="200" x2="175" y2="18"/>
+<text class="tick" x="306" y="174">x</text><text class="tick" x="181" y="28">y</text><text class="tick" x="163" y="196">0</text><text class="tick" x="181" y="143">1</text>
+<path class="curve" d="M45,176 C75,174 105,170 125,164 C145,158 160,151 175,140 C196,125 215,105 228,80 C241,55 252,31 258,20"/>
+<circle class="point" cx="175" cy="140" r="4"/>
+</svg>
+<p class="graph-note">При увеличении x функция растёт.</p>
+</div>
+
+<div class="graph-card">
+<div class="graph-title">y = (1/2)ˣ, 0 &lt; a &lt; 1</div>
+<svg viewBox="0 0 330 220" aria-label="График y равно одна вторая в степени x">
+<line class="grid" x1="35" y1="40" x2="315" y2="40"/><line class="grid" x1="35" y1="80" x2="315" y2="80"/><line class="grid" x1="35" y1="120" x2="315" y2="120"/><line class="grid" x1="35" y1="160" x2="315" y2="160"/>
+<line class="grid" x1="75" y1="20" x2="75" y2="195"/><line class="grid" x1="125" y1="20" x2="125" y2="195"/><line class="grid" x1="175" y1="20" x2="175" y2="195"/><line class="grid" x1="225" y1="20" x2="225" y2="195"/><line class="grid" x1="275" y1="20" x2="275" y2="195"/>
+<line class="axis" x1="35" y1="180" x2="315" y2="180"/><line class="axis" x1="175" y1="200" x2="175" y2="18"/>
+<text class="tick" x="306" y="174">x</text><text class="tick" x="181" y="28">y</text><text class="tick" x="163" y="196">0</text><text class="tick" x="181" y="143">1</text>
+<path class="curve" d="M92,20 C100,44 111,69 124,92 C138,116 154,132 175,140 C195,148 217,157 241,164 C264,170 287,174 310,176"/>
+<circle class="point" cx="175" cy="140" r="4"/>
+</svg>
+<p class="graph-note">При увеличении x функция убывает.</p>
+</div>
+</div>
+
+<div class="rule"><strong>Запомнить:</strong> если a &gt; 1 — график возрастает; если 0 &lt; a &lt; 1 — график убывает.</div>
+</section>
+
+<section>
+<h2>6. Таблица значений и поведение графика</h2>
+<h3>Пример: y = 2<sup>x</sup></h3>
+<div class="formula">2<sup>−2</sup> = 1/4, &nbsp; 2<sup>−1</sup> = 1/2, &nbsp; 2<sup>0</sup> = 1, &nbsp; 2<sup>1</sup> = 2, &nbsp; 2<sup>2</sup> = 4.</div>
+<h3>Пример: y = (1/2)<sup>x</sup></h3>
+<div class="formula">(1/2)<sup>−2</sup> = 4, &nbsp; (1/2)<sup>−1</sup> = 2, &nbsp; (1/2)<sup>0</sup> = 1, &nbsp; (1/2)<sup>1</sup> = 1/2.</div>
+</section>
+
+<section>
+<h2>7. Сравнение показательных выражений</h2>
+<div class="example">
+<p class="example-title">Если основание больше 1</p>
+<p>Так как 3 &gt; 1 и 2 &lt; 5, то</p>
+<div class="formula">3<sup>2</sup> &lt; 3<sup>5</sup>.</div>
+</div>
+<div class="example">
+<p class="example-title">Если основание между 0 и 1</p>
+<p>При 0 &lt; 1/2 &lt; 1 функция убывает, поэтому</p>
+<div class="formula">(1/2)<sup>2</sup> &gt; (1/2)<sup>5</sup>.</div>
+</div>
+</section>
+
+<section>
+<h2>8. Применение показательной функции</h2>
+<p>Показательная функция возникает тогда, когда величина за одинаковые промежутки времени изменяется <strong>в одно и то же число раз</strong> или на один и тот же процент.</p>
+
+<div class="apps">
+<div class="app"><strong>Рост вклада</strong><p>S = S₀(1 + p/100)<sup>n</sup></p><p>Каждый год сумма увеличивается на p%.</p></div>
+<div class="app"><strong>Рост населения или бактерий</strong><p>N = N₀·q<sup>t</sup>, q &gt; 1</p><p>Количество постоянно увеличивается в q раз.</p></div>
+<div class="app"><strong>Убывание</strong><p>N = N₀·q<sup>t</sup>, 0 &lt; q &lt; 1</p><p>Так моделируют многие процессы распада и уменьшения.</p></div>
+</div>
+</section>
+
+<section>
+<h2>9. Простой пример применения</h2>
+<div class="example">
+<p class="example-title">Банковский вклад</p>
+<p>На вклад положили 10 000 рублей под 5% годовых. Найдём сумму через 2 года.</p>
+<div class="formula">S = 10 000 · 1,05<sup>2</sup> = 10 000 · 1,1025 = 11 025.</div>
+<p class="answer">Ответ: 11 025 рублей.</p>
+</div>
+<p>Множитель 1,05 означает, что после каждого года сумма становится в 1,05 раза больше.</p>
+</section>
+
+<section>
+<h2>10. Что нужно запомнить</h2>
+<div class="checklist">
+<ul>
+<li>a<sup>x</sup> с произвольным действительным показателем рассматривают при a &gt; 0;</li>
+<li>показательная функция: y = a<sup>x</sup>, где a &gt; 0 и a ≠ 1;</li>
+<li>область определения — все действительные числа;</li>
+<li>значения функции всегда положительны;</li>
+<li>график проходит через (0; 1);</li>
+<li>при a &gt; 1 функция возрастает;</li>
+<li>при 0 &lt; a &lt; 1 функция убывает;</li>
+<li>показательные зависимости описывают процессы роста и убывания.</li>
+</ul>
+</div>
+</section>
+</main>
+</body>
+</html>

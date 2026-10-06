@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Практика №11. Показательная функция</title>
+<style>
+:root{--bg:#f3f3f0;--paper:#fff;--accent:#244f43;--text:#202a25;--muted:#626862;--line:#deded8;--soft:#f6f8f6}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+.sheet{max-width:940px;margin:28px auto 50px;padding:38px 46px;background:var(--paper);border:1px solid var(--line);border-radius:10px;box-shadow:0 8px 28px rgba(0,0,0,.04)}
+.kicker{margin:0 0 7px;text-align:center;color:var(--accent);font-size:12px;font-weight:700}
+h1{margin:0 0 10px;text-align:center;font-size:28px;line-height:1.2}
+.lead{margin:0 auto 24px;max-width:760px;text-align:center;color:var(--muted);font-size:15px;line-height:1.5}
+.section{margin-top:26px}
+.section h2{margin:0 0 12px;padding-bottom:7px;border-bottom:2px solid var(--accent);color:var(--accent);font-size:18px}
+.tasks{font:18px/1.45 Georgia,"Times New Roman",serif}
+.two{columns:2;column-gap:40px}
+.task{break-inside:avoid;margin:0 0 11px;padding:0 0 7px;border-bottom:1px solid #ecece8}
+.num{font:700 15px Arial,Helvetica,sans-serif;color:var(--accent);margin-right:3px}
+.note{margin-top:20px;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--soft);color:var(--muted);font-size:14px}
+@media(max-width:700px){.sheet{margin:8px;padding:24px 18px}.two{columns:1}.tasks{font-size:19px}h1{font-size:24px}}
+@media print{@page{size:A4;margin:12mm}body{background:#fff}.sheet{max-width:none;margin:0;padding:0;border:0;box-shadow:none}h1{font-size:20px}.lead{font-size:11px;margin-bottom:12px}.section{margin-top:14px}.section h2{font-size:13px;margin-bottom:7px}.tasks{font-size:12.3px;line-height:1.24}.task{margin-bottom:5px;padding-bottom:3px}.note{font-size:10px}}
+</style>
+</head>
+<body>
+<main class="sheet">
+<p class="kicker">МАТЕМАТИКА · 1 КУРС</p>
+<h1>Практика №11. Показательная функция</h1>
+<p class="lead">Степени, свойства показательной функции, сравнение значений и построение графиков.</p>
+
+<section class="section">
+<h2>1. Вычислите</h2>
+<div class="tasks two">
+<div class="task"><span class="num">1.</span> 2<sup>−3</sup> + 4<sup>−1</sup>.</div>
+<div class="task"><span class="num">2.</span> 9<sup>1/2</sup> · 27<sup>1/3</sup>.</div>
+<div class="task"><span class="num">3.</span> 16<sup>3/4</sup> − 25<sup>1/2</sup>.</div>
+<div class="task"><span class="num">4.</span> 8<sup>−2/3</sup> + 32<sup>1/5</sup>.</div>
+<div class="task"><span class="num">5.</span> (1/3)<sup>−2</sup> − 5<sup>0</sup>.</div>
+<div class="task"><span class="num">6.</span> 0,25<sup>−1/2</sup> + 0,008<sup>1/3</sup>.</div>
+<div class="task"><span class="num">7.</span> 81<sup>−3/4</sup>.</div>
+<div class="task"><span class="num">8.</span> 125<sup>2/3</sup> : 25.</div>
+<div class="task"><span class="num">9.</span> (2<sup>√2</sup>)<sup>√2</sup>.</div>
+<div class="task"><span class="num">10.</span> 5<sup>π+1</sup> : 5<sup>π−1</sup>.</div>
+<div class="task"><span class="num">11.</span> 3<sup>√5</sup> · 3<sup>−√5</sup>.</div>
+<div class="task"><span class="num">12.</span> (7<sup>√3</sup>)<sup>√3</sup> : 7<sup>2</sup>.</div>
+</div>
+</section>
+
+<section class="section">
+<h2>2. Упростите</h2>
+<div class="tasks two">
+<div class="task"><span class="num">13.</span> <i>a</i><sup>2,7</sup> · <i>a</i><sup>−1,2</sup>.</div>
+<div class="task"><span class="num">14.</span> <i>b</i><sup>√2+3</sup> : <i>b</i><sup>√2−1</sup>.</div>
+<div class="task"><span class="num">15.</span> (<i>x</i><sup>√3</sup>)<sup>√3</sup>.</div>
+<div class="task"><span class="num">16.</span> (<i>a</i><sup>1/2</sup><i>b</i><sup>1/3</sup>)<sup>6</sup>.</div>
+<div class="task"><span class="num">17.</span> (<i>x</i><sup>3/4</sup><i>y</i><sup>−1/2</sup>)<sup>4</sup>.</div>
+<div class="task"><span class="num">18.</span> <i>m</i><sup>π+2</sup> · <i>m</i><sup>1−π</sup>.</div>
+<div class="task"><span class="num">19.</span> (<i>p</i><sup>√5+1</sup> : <i>p</i><sup>√5−2</sup>)<sup>2</sup>.</div>
+<div class="task"><span class="num">20.</span> (4<i>a</i><sup>2<i>x</i></sup>) : (2<i>a</i><sup><i>x</i>−1</sup>).</div>
+<div class="task"><span class="num">21.</span> (<i>a</i><sup><i>x</i>+1</sup>)<sup>2</sup> : <i>a</i><sup>2<i>x</i>−3</sup>.</div>
+<div class="task"><span class="num">22.</span> (<i>x</i><sup>√2</sup><i>y</i><sup>√2</sup>) : (<i>xy</i>)<sup>√2−1</sup>.</div>
+<div class="task"><span class="num">23.</span> (<i>a</i><sup>−1/3</sup><i>b</i><sup>1/2</sup>)<sup>6</sup>.</div>
+<div class="task"><span class="num">24.</span> (<i>c</i><sup>π</sup>)<sup>2</sup> · <i>c</i><sup>1−2π</sup>.</div>
+</div>
+</section>
+
+<section class="section">
+<h2>3. Сравните</h2>
+<div class="tasks two">
+<div class="task"><span class="num">25.</span> 3<sup>2,4</sup> и 3<sup>2,7</sup>.</div>
+<div class="task"><span class="num">26.</span> (1/2)<sup>−3</sup> и (1/2)<sup>−2</sup>.</div>
+<div class="task"><span class="num">27.</span> 7<sup>√3</sup> и 7<sup>1,7</sup>.</div>
+<div class="task"><span class="num">28.</span> 0,4<sup>π</sup> и 0,4<sup>3</sup>.</div>
+<div class="task"><span class="num">29.</span> 5<sup><i>x</i>+1</sup> и 5<sup><i>x</i>−2</sup>.</div>
+<div class="task"><span class="num">30.</span> (2/3)<sup>2<i>x</i></sup> и (2/3)<sup>2<i>x</i>+1</sup>.</div>
+<div class="task"><span class="num">31.</span> 2<sup>−√5</sup> и 2<sup>−2</sup>.</div>
+<div class="task"><span class="num">32.</span> (1/3)<sup>√10</sup> и (1/3)<sup>3</sup>.</div>
+<div class="task"><span class="num">33.</span> 1,1<sup>−4</sup> и 1,1<sup>−5</sup>.</div>
+<div class="task"><span class="num">34.</span> 0,8<sup>√7</sup> и 0,8<sup>2,6</sup>.</div>
+<div class="task"><span class="num">35.</span> (3/2)<sup><i>x</i>²+1</sup> и (3/2)<sup><i>x</i>²</sup>.</div>
+<div class="task"><span class="num">36.</span> (4/5)<sup>|<i>x</i>|+2</sup> и (4/5)<sup>|<i>x</i>|−1</sup>.</div>
+</div>
+</section>
+
+<section class="section">
+<h2>4. Составьте таблицу значений и постройте график</h2>
+<div class="tasks two">
+<div class="task"><span class="num">37.</span> <i>y</i> = 2<sup><i>x</i></sup>, &nbsp; <i>x</i> = −2, −1, 0, 1, 2.</div>
+<div class="task"><span class="num">38.</span> <i>y</i> = 3<sup><i>x</i></sup>, &nbsp; <i>x</i> = −2, −1, 0, 1, 2.</div>
+<div class="task"><span class="num">39.</span> <i>y</i> = (1/2)<sup><i>x</i></sup>, &nbsp; <i>x</i> = −2, −1, 0, 1, 2.</div>
+<div class="task"><span class="num">40.</span> <i>y</i> = (1/3)<sup><i>x</i></sup>, &nbsp; <i>x</i> = −2, −1, 0, 1, 2.</div>
+<div class="task"><span class="num">41.</span> <i>y</i> = 4<sup><i>x</i></sup>, &nbsp; <i>x</i> = −1, 0, 1, 2.</div>
+<div class="task"><span class="num">42.</span> <i>y</i> = 0,25<sup><i>x</i></sup>, &nbsp; <i>x</i> = −2, −1, 0, 1.</div>
+<div class="task"><span class="num">43.</span> <i>y</i> = 5<sup><i>x</i></sup>, &nbsp; <i>x</i> = −1, 0, 1, 2.</div>
+<div class="task"><span class="num">44.</span> <i>y</i> = 0,2<sup><i>x</i></sup>, &nbsp; <i>x</i> = −2, −1, 0, 1.</div>
+</div>
+</section>
+
+<section class="section">
+<h2>5. Постройте график с помощью преобразований</h2>
+<div class="tasks two">
+<div class="task"><span class="num">45.</span> <i>y</i> = 2<sup><i>x</i></sup> + 1.</div>
+<div class="task"><span class="num">46.</span> <i>y</i> = 2<sup><i>x</i></sup> − 3.</div>
+<div class="task"><span class="num">47.</span> <i>y</i> = 2<sup><i>x</i>−1</sup>.</div>
+<div class="task"><span class="num">48.</span> <i>y</i> = 2<sup><i>x</i>+2</sup>.</div>
+<div class="task"><span class="num">49.</span> <i>y</i> = −2<sup><i>x</i></sup>.</div>
+<div class="task"><span class="num">50.</span> <i>y</i> = 3 − 2<sup><i>x</i></sup>.</div>
+<div class="task"><span class="num">51.</span> <i>y</i> = (1/2)<sup><i>x</i></sup> + 2.</div>
+<div class="task"><span class="num">52.</span> <i>y</i> = (1/3)<sup><i>x</i>−1</sup> − 1.</div>
+</div>
+</section>
+
+<section class="section">
+<h2>6. Укажите область определения, область значений и монотонность</h2>
+<div class="tasks two">
+<div class="task"><span class="num">53.</span> <i>y</i> = 6<sup><i>x</i></sup>.</div>
+<div class="task"><span class="num">54.</span> <i>y</i> = 0,6<sup><i>x</i></sup>.</div>
+<div class="task"><span class="num">55.</span> <i>y</i> = 3<sup><i>x</i></sup> + 4.</div>
+<div class="task"><span class="num">56.</span> <i>y</i> = 5<sup><i>x</i></sup> − 2.</div>
+<div class="task"><span class="num">57.</span> <i>y</i> = −2<sup><i>x</i></sup>.</div>
+<div class="task"><span class="num">58.</span> <i>y</i> = 1 − 4<sup><i>x</i></sup>.</div>
+<div class="task"><span class="num">59.</span> <i>y</i> = (1/2)<sup><i>x</i>−3</sup>.</div>
+<div class="task"><span class="num">60.</span> <i>y</i> = (1/4)<sup><i>x</i></sup> + 5.</div>
+</div>
+</section>
+
+<div class="note">Во всех выражениях с буквенными основаниями считать основания положительными. Для графиков обязательно отмечайте точку, соответствующую исходной точке (0; 1), и горизонтальную асимптоту.</div>
+</main>
+</body>
+</html>
