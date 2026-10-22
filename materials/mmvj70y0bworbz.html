@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Логарифм числа</title>
+<style>
+:root{--bg:#f3f3f0;--paper:#fff;--accent:#244f43;--text:#202a25;--muted:#626862;--line:#deded8;--soft:#f1f5f2;--warn:#fff8e8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}.lesson{max-width:940px;margin:28px auto 50px;padding:40px 48px;background:var(--paper);border:1px solid var(--line);border-radius:10px;box-shadow:0 8px 28px rgba(0,0,0,.04);font:18px/1.55 Georgia,"Times New Roman",serif}.kicker{margin:0 0 8px;color:var(--accent);font:700 12px Arial;letter-spacing:.06em}.lesson h1{margin:0 0 12px;font:700 30px/1.2 Arial}.lead{margin:0 0 24px;color:var(--muted);font:17px/1.5 Arial}.lesson section{margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}.lesson h2{margin:0 0 14px;color:var(--accent);font:700 21px/1.3 Arial}.lesson h3{margin:18px 0 8px;color:var(--accent);font:700 17px Arial}.formula{margin:12px 0;padding:12px 15px;border-left:4px solid var(--accent);background:var(--soft);font-size:20px}.rule,.example,.warning{margin:14px 0;padding:14px 17px;border-radius:8px}.rule{background:var(--soft);border:1px solid var(--line)}.example{border:1px solid var(--line)}.warning{background:var(--warn);border:1px solid #ead9a5}.answer{font-weight:700}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:17px}th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}th{background:var(--soft);font:700 14px Arial}.steps{background:var(--soft);padding:12px 20px;border-radius:8px}.steps li{margin:7px 0}
+@media(max-width:700px){.lesson{margin:8px;padding:24px 18px;font-size:18px}.lesson h1{font-size:26px}.lesson h2{font-size:20px}.formula{font-size:19px}table{font-size:16px}}
+@media print{@page{size:A4;margin:14mm}body{background:#fff}.lesson{max-width:none;margin:0;padding:0;border:0;box-shadow:none;font-size:12.5pt;line-height:1.38}.lesson h1{font-size:22pt}.lesson h2{font-size:15pt;break-after:avoid}.lesson section{margin-top:17px;padding-top:13px}.formula{font-size:13.5pt;padding:8px 11px}.rule,.example,.warning{break-inside:avoid;margin:9px 0;padding:9px 12px}table{font-size:11pt}}
+</style>
+<link href="../reader.css" rel="stylesheet"><script src="../catalog.js" defer=""></script><script src="../document.js" defer=""></script></head>
+<body>
+<main class="lesson">
+<p class="kicker">МАТЕМАТИКА · 1 КУРС · КОНСПЕКТ</p>
+<h1>Логарифм числа</h1>
+<p class="lead">Определение логарифма, переход между показательной и логарифмической формами, основное логарифмическое тождество, десятичный и натуральный логарифмы.</p>
+
+<section>
+<h2>1. Определение логарифма</h2>
+<p><strong>Логарифмом положительного числа <i>b</i> по основанию <i>a</i></strong> называется показатель степени, в которую нужно возвести <i>a</i>, чтобы получить <i>b</i>.</p>
+<div class="formula">log<sub><i>a</i></sub><i>b</i> = <i>c</i> ⇔ <i>a</i><sup><i>c</i></sup> = <i>b</i>.</div>
+<div class="rule"><strong>Обязательные условия:</strong> <i>a</i> &gt; 0, &nbsp; <i>a</i> ≠ 1, &nbsp; <i>b</i> &gt; 0.</div>
+<p>В записи log<sub><i>a</i></sub><i>b</i> число <i>a</i> — <strong>основание</strong>, число <i>b</i> — <strong>аргумент</strong>.</p>
+<div class="example"><strong>Пример 1.</strong> log<sub>2</sub>8 = 3, потому что 2<sup>3</sup> = 8.</div>
+</section>
+
+<section>
+<h2>2. Когда логарифм существует</h2>
+<div class="table-wrap"><table>
+<tbody><tr><th>Запись</th><th>Существует?</th><th>Причина</th></tr>
+<tr><td>log<sub>2</sub>8</td><td>Да</td><td>Основание положительно и не равно 1, аргумент положителен</td></tr>
+<tr><td>log<sub>1</sub>5</td><td>Нет</td><td>Основание не может равняться 1</td></tr>
+<tr><td>log<sub>−2</sub>8</td><td>Нет</td><td>Основание должно быть положительным</td></tr>
+<tr><td>log<sub>3</sub>(−9)</td><td>Нет</td><td>Аргумент должен быть положительным</td></tr>
+<tr><td>log<sub>5</sub>0</td><td>Нет</td><td>Аргумент не может равняться нулю</td></tr>
+</tbody></table></div>
+<div class="warning"><strong>Важно:</strong> логарифма отрицательного числа и логарифма нуля в действительных числах не существует.</div>
+</section>
+
+<section>
+<h2>3. Переход к показательной форме</h2>
+<p>Чтобы вычислить логарифм, замените логарифмическую запись равносильной показательной.</p>
+<div class="example"><strong>Пример 2.</strong> log<sub>5</sub>125 = <i>x</i> ⇔ 5<sup><i>x</i></sup> = 125 = 5<sup>3</sup>.<br><span class="answer">Ответ: 3.</span></div>
+<div class="example"><strong>Пример 3.</strong> log<sub>2</sub>(1/16) = <i>x</i> ⇔ 2<sup><i>x</i></sup> = 1/16 = 2<sup>−4</sup>.<br><span class="answer">Ответ: −4.</span></div>
+</section>
+
+<section>
+<h2>4. Переход от степени к логарифму</h2>
+<div class="formula"><i>a</i><sup><i>c</i></sup> = <i>b</i> ⇔ log<sub><i>a</i></sub><i>b</i> = <i>c</i>.</div>
+<div class="example"><strong>Пример 4.</strong> 3<sup>4</sup> = 81 ⇔ log<sub>3</sub>81 = 4.</div>
+<div class="example"><strong>Пример 5.</strong> 9<sup>1/2</sup> = 3 ⇔ log<sub>9</sub>3 = 1/2.</div>
+</section>
+
+<section>
+<h2>5. Простейшие значения логарифмов</h2>
+<div class="formula">log<sub><i>a</i></sub>1 = 0, потому что <i>a</i><sup>0</sup> = 1.</div>
+<div class="formula">log<sub><i>a</i></sub><i>a</i> = 1, потому что <i>a</i><sup>1</sup> = <i>a</i>.</div>
+<div class="table-wrap"><table>
+<tbody><tr><th>Логарифм</th><th>Проверка степенью</th><th>Значение</th></tr>
+<tr><td>log<sub>2</sub>32</td><td>2<sup>5</sup> = 32</td><td>5</td></tr>
+<tr><td>log<sub>3</sub>(1/27)</td><td>3<sup>−3</sup> = 1/27</td><td>−3</td></tr>
+<tr><td>log<sub>25</sub>5</td><td>25<sup>1/2</sup> = 5</td><td>1/2</td></tr>
+<tr><td>log<sub>1/2</sub>8</td><td>(1/2)<sup>−3</sup> = 8</td><td>−3</td></tr>
+</tbody></table></div>
+</section>
+
+<section>
+<h2>6. Логарифмические уравнения по определению</h2>
+<p>Если неизвестен аргумент, перейдите к показательной форме и обязательно проверьте, что аргумент положителен.</p>
+<div class="example"><strong>Пример 6.</strong> log<sub>3</sub>(<i>x</i> − 1) = 2.<br><i>x</i> − 1 = 3<sup>2</sup>; &nbsp; <i>x</i> = 10. Условие <i>x</i> − 1 &gt; 0 выполнено.<br><span class="answer">Ответ: 10.</span></div>
+<div class="example"><strong>Пример 7.</strong> log<sub>9</sub><i>x</i><sup>2</sup> = 1.<br><i>x</i><sup>2</sup> = 9; &nbsp; <i>x</i> = −3 или <i>x</i> = 3. При обоих значениях <i>x</i><sup>2</sup> &gt; 0.<br><span class="answer">Ответ: −3; 3.</span></div>
+</section>
+
+<section>
+<h2>7. Если неизвестно основание</h2>
+<p>Основание логарифма должно удовлетворять условиям <i>a</i> &gt; 0 и <i>a</i> ≠ 1.</p>
+<div class="example"><strong>Пример 8.</strong> log<sub><i>x</i></sub>64 = 3.<br><i>x</i><sup>3</sup> = 64; &nbsp; <i>x</i> = 4. Условия для основания выполнены.<br><span class="answer">Ответ: 4.</span></div>
+<div class="example"><strong>Пример 9.</strong> log<sub><i>x</i></sub>(1/8) = −3.<br><i>x</i><sup>−3</sup> = 1/8; &nbsp; 1/<i>x</i><sup>3</sup> = 1/8; &nbsp; <i>x</i> = 2.<br><span class="answer">Ответ: 2.</span></div>
+</section>
+
+<section>
+<h2>8. Основное логарифмическое тождество</h2>
+<div class="formula"><i>a</i><sup>log<sub><i>a</i></sub><i>b</i></sup> = <i>b</i>, &nbsp; где <i>a</i> &gt; 0, <i>a</i> ≠ 1, <i>b</i> &gt; 0.</div>
+<div class="formula">log<sub><i>a</i></sub>(<i>a</i><sup><i>x</i></sup>) = <i>x</i>.</div>
+<div class="example"><strong>Пример 10.</strong> 2<sup>log<sub>2</sub>7</sup> = 7.</div>
+<div class="example"><strong>Пример 11.</strong> log<sub>5</sub>(5<sup>−3</sup>) = −3.</div>
+</section>
+
+<section>
+<h2>9. Десятичный логарифм</h2>
+<p>Логарифм по основанию 10 записывают без основания:</p>
+<div class="formula">lg <i>b</i> = log<sub>10</sub><i>b</i>.</div>
+<div class="example"><strong>Пример 12.</strong> lg 1000 = 3, потому что 10<sup>3</sup> = 1000.</div>
+<div class="example"><strong>Пример 13.</strong> lg 0,01 = −2, потому что 10<sup>−2</sup> = 0,01.</div>
+</section>
+
+<section>
+<h2>10. Натуральный логарифм и число <i>e</i></h2>
+<p>Число <i>e</i> ≈ 2,71828. Логарифм по основанию <i>e</i> называется <strong>натуральным</strong> и обозначается ln.</p>
+<div class="formula">ln <i>b</i> = log<sub><i>e</i></sub><i>b</i>.</div>
+<div class="example"><strong>Пример 14.</strong> ln <i>e</i><sup>4</sup> = 4.</div>
+<div class="example"><strong>Пример 15.</strong> <i>e</i><sup>ln 6</sup> = 6.</div>
+</section>
+
+<section>
+<h2>11. Алгоритм вычисления логарифма</h2>
+<ol class="steps">
+<li>Проверить условия существования логарифма.</li>
+<li>Обозначить значение логарифма буквой, например <i>x</i>.</li>
+<li>Перейти к показательной форме.</li>
+<li>Представить аргумент в виде степени основания.</li>
+<li>Сравнить показатели и записать ответ.</li>
+</ol>
+</section>
+
+<section>
+<h2>12. Частые ошибки</h2>
+<ul>
+<li>путают основание и аргумент;</li>
+<li>допускают основание 1, 0 или отрицательное число;</li>
+<li>пытаются найти логарифм нуля или отрицательного числа;</li>
+<li>забывают знак «минус» при логарифме правильной дроби по основанию больше 1;</li>
+<li>не проверяют условия для неизвестного основания или аргумента.</li>
+</ul>
+<div class="warning"><strong>Пока не используем</strong> формулы логарифма произведения, частного и степени. Они относятся к следующей теме «Свойства логарифмов».</div>
+</section>
+</main>
+
+
+</body></html>
