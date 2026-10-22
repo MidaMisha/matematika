@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ru"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Практика №17. Свойства логарифмов</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f3f3f0; color: #18231e; }
+    .page {
+      width: min(960px, calc(100% - 24px));
+      margin: 24px auto 45px;
+      padding: 36px 44px;
+      background: #fff;
+      border: 1px solid #deded8;
+      border-radius: 12px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font: 700 27px/1.25 Arial, sans-serif;
+      text-align: center;
+    }
+    .note {
+      margin: 0 0 24px;
+      color: #526159;
+      font: 15px/1.5 Arial, sans-serif;
+      text-align: center;
+    }
+    h2 {
+      margin: 24px 0 12px;
+      padding-bottom: 8px;
+      color: #244f43;
+      border-bottom: 1px solid #deded8;
+      font: 700 17px/1.4 Arial, sans-serif;
+    }
+    ol {
+      columns: 2;
+      column-gap: 42px;
+      margin: 0;
+      padding-left: 31px;
+    }
+    li {
+      min-height: 42px;
+      padding: 7px 0 7px 7px;
+      break-inside: avoid;
+      font: 20px/1.35 "Cambria Math", "Times New Roman", serif;
+    }
+    .math { white-space: nowrap; }
+    sub {
+      position: relative;
+      bottom: -0.08em;
+      font-size: 0.64em;
+      line-height: 0;
+    }
+    sup {
+      position: relative;
+      top: -0.18em;
+      font-size: 0.66em;
+      line-height: 0;
+    }
+    .frac {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 0.14em;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 0.84em;
+      line-height: 0.96;
+    }
+    .frac > span:first-child {
+      padding: 0 0.18em 0.06em;
+      border-bottom: 1px solid currentColor;
+    }
+    .frac > span:last-child { padding: 0.06em 0.18em 0; }
+    .root { text-decoration: overline; }
+    .cube-root, .fourth-root { white-space: nowrap; }
+    .cube-root small, .fourth-root small {
+      position: relative;
+      top: -0.62em;
+      margin-right: -0.08em;
+      font-size: 0.55em;
+    }
+    @media screen and (max-width: 650px) {
+      .page { padding: 25px 20px; }
+      h1 { font-size: 23px; }
+      ol { columns: 1; }
+      li { font-size: 20px; }
+      .note { font-size: 14px; }
+    }
+    @media print {
+      @page { size: A4; margin: 10mm 11mm; }
+      body { background: #fff; }
+      .page { width: auto; margin: 0; padding: 0; border: 0; border-radius: 0; }
+      h1 { margin-bottom: 2mm; font-size: 16pt; }
+      .note { margin-bottom: 3mm; font-size: 9pt; }
+      h2 {
+        margin: 3mm 0 1.5mm;
+        padding-bottom: 1mm;
+        font-size: 10.5pt;
+        break-after: avoid;
+      }
+      ol { columns: 2; column-gap: 9mm; }
+      li { min-height: 0; padding: 1.35mm 0 1.35mm 1mm; font-size: 10.5pt; line-height: 1.2; }
+      section { break-inside: auto; }
+    }
+  </style>
+<link href="../reader.css" rel="stylesheet"><script src="../catalog.js" defer=""></script><script src="../document.js" defer=""></script></head>
+<body>
+  <main class="page">
+    <h1>Практика №17. Свойства логарифмов</h1>
+    <p class="note">Во всех выражениях логарифмы определены. Переменные положительны; основания положительны и не равны 1.</p>
+
+    <section>
+      <h2>1. Вычислите по определению логарифма</h2>
+      <ol start="1">
+        <li><span class="math">log<sub>2</sub> 32</span></li>
+        <li><span class="math">log<sub>3</sub>(<span class="frac"><span>1</span><span>27</span></span>)</span></li>
+        <li><span class="math">log<sub>5</sub> √<span class="root">5</span></span></li>
+        <li><span class="math">log<sub>4</sub> 8</span></li>
+        <li><span class="math">log<sub>9</sub> 3</span></li>
+        <li><span class="math">lg 0,001</span></li>
+        <li><span class="math">ln e<sup>5</sup></span></li>
+        <li><span class="math">log<sub>1/2</sub> 8</span></li>
+        <li><span class="math">log<sub>√2</sub> 8</span></li>
+        <li><span class="math">log<sub>27</sub> 9</span></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>2. Примените свойства логарифма произведения и частного</h2>
+      <ol start="11">
+        <li><span class="math">log<sub>2</sub> 4 + log<sub>2</sub> 8</span></li>
+        <li><span class="math">log<sub>3</sub> 81 − log<sub>3</sub> 3</span></li>
+        <li><span class="math">lg 2 + lg 5</span></li>
+        <li><span class="math">log<sub>7</sub> 49 − log<sub>7</sub>(<span class="frac"><span>1</span><span>7</span></span>)</span></li>
+        <li><span class="math">log<sub>3</sub> 6 + log<sub>3</sub> 4,5</span></li>
+        <li><span class="math">log<sub>2</sub> 12 − log<sub>2</sub> 3</span></li>
+        <li><span class="math">log<sub>5</sub> 125 + log<sub>5</sub>(<span class="frac"><span>1</span><span>25</span></span>)</span></li>
+        <li><span class="math">log<sub>4</sub> 8 + log<sub>4</sub> 2</span></li>
+        <li><span class="math">ln(3e) − ln 3</span></li>
+        <li><span class="math">log<sub>1/3</sub> 9 + log<sub>1/3</sub> 3</span></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>3. Примените свойство логарифма степени</h2>
+      <ol start="21">
+        <li><span class="math">log<sub>2</sub> 8<sup>4</sup></span></li>
+        <li><span class="math">log<sub>3</sub> √<span class="root">27</span></span></li>
+        <li><span class="math">log<sub>5</sub>(<span class="frac"><span>1</span><span>√<span class="root">125</span></span></span>)</span></li>
+        <li><span class="math">log<sub>4</sub> 2<sup>7</sup></span></li>
+        <li><span class="math">2log<sub>3</sub> 9 − log<sub>3</sub> 27</span></li>
+        <li><span class="math"><span class="frac"><span>1</span><span>3</span></span>log<sub>2</sub> 64</span></li>
+        <li><span class="math">log<sub>7</sub>(49√<span class="root">7</span>)</span></li>
+        <li><span class="math">log<sub>9</sub> 27<sup>2</sup></span></li>
+        <li><span class="math">lg <span class="fourth-root"><small>4</small>√<span class="root">1000</span></span></span></li>
+        <li><span class="math">ln(e<sup>−3</sup>√<span class="root">e</span>)</span></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>4. Разложите выражение на сумму и разность логарифмов</h2>
+      <ol start="31">
+        <li><span class="math">log<sub>2</sub>(8x)</span></li>
+        <li><span class="math">log<sub>3</sub>(<span class="frac"><span>x<sup>2</sup></span><span>9</span></span>)</span></li>
+        <li><span class="math">lg(100x<sup>3</sup>)</span></li>
+        <li><span class="math">ln(x√<span class="root">y</span>)</span></li>
+        <li><span class="math">log<sub>a</sub>(x<sup>4</sup>y<sup>2</sup>)</span></li>
+        <li><span class="math">log<sub>5</sub>(<span class="frac"><span>25x</span><span>y<sup>3</sup></span></span>)</span></li>
+        <li><span class="math">log<sub>b</sub>(<span class="frac"><span>√<span class="root">x</span></span><span>y</span></span>)</span></li>
+        <li><span class="math">log<sub>2</sub>(<span class="frac"><span>8x<sup>2</sup></span><span>y√<span class="root">z</span></span></span>)</span></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>5. Представьте выражение в виде одного логарифма</h2>
+      <ol start="39">
+        <li><span class="math">log<sub>2</sub> x + log<sub>2</sub> y</span></li>
+        <li><span class="math">log<sub>3</sub> x − log<sub>3</sub> y</span></li>
+        <li><span class="math">2log<sub>5</sub> x + log<sub>5</sub> y</span></li>
+        <li><span class="math">log<sub>a</sub> x + 3log<sub>a</sub> y − log<sub>a</sub> z</span></li>
+        <li><span class="math"><span class="frac"><span>1</span><span>2</span></span>ln x − ln y</span></li>
+        <li><span class="math">2lg x − 3lg y</span></li>
+        <li><span class="math"><span class="frac"><span>1</span><span>3</span></span>log<sub>2</sub> x + log<sub>2</sub> y</span></li>
+        <li><span class="math">2log<sub>b</sub> x − <span class="frac"><span>1</span><span>2</span></span>log<sub>b</sub> y + log<sub>b</sub> z</span></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>6. Выполните переход к новому основанию или упростите</h2>
+      <ol start="47">
+        <li><span class="math">Выразите log<sub>2</sub> 7 через lg</span></li>
+        <li><span class="math">Выразите log<sub>5</sub> 3 через ln</span></li>
+        <li><span class="math">log<sub>2</sub> 3 · log<sub>3</sub> 8</span></li>
+        <li><span class="math">log<sub>3</sub> 5 · log<sub>5</sub> 9</span></li>
+        <li><span class="math"><span class="frac"><span>log<sub>2</sub> 7</span><span>log<sub>2</sub> 49</span></span></span></li>
+        <li><span class="math"><span class="frac"><span>1</span><span>log<sub>5</sub> 2</span></span></span></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>7. Упростите смешанные выражения</h2>
+      <ol start="53">
+        <li><span class="math">log<sub>2</sub> 48 − log<sub>2</sub> 3 − log<sub>2</sub> 2</span></li>
+        <li><span class="math">log<sub>3</sub> 54 − log<sub>3</sub> 2 + log<sub>3</sub>(<span class="frac"><span>1</span><span>3</span></span>)</span></li>
+        <li><span class="math">log<sub>5</sub> 20 + log<sub>5</sub> 25 − log<sub>5</sub> 4</span></li>
+        <li><span class="math">2log<sub>2</sub> 3 + log<sub>2</sub>(<span class="frac"><span>8</span><span>9</span></span>)</span></li>
+        <li><span class="math"><span class="frac"><span>1</span><span>2</span></span>log<sub>3</sub> 81 + log<sub>3</sub>(<span class="frac"><span>1</span><span>3</span></span>)</span></li>
+        <li><span class="math">lg 4 + lg 25 − lg 10</span></li>
+        <li><span class="math">ln(e<sup>4</sup>x) − ln x − 2ln e</span></li>
+        <li><span class="math">log<sub>a</sub>(a<sup>3</sup>x<sup>2</sup>) − 2log<sub>a</sub> x + log<sub>a</sub>(<span class="frac"><span>1</span><span>a</span></span>)</span></li>
+      </ol>
+    </section>
+  </main>
+
+
+</body></html>

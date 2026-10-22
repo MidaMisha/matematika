@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="ru"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Конспект. Свойства логарифмов</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f2f3f1; color: #17201c; }
+    .page {
+      width: min(940px, calc(100% - 24px));
+      margin: 24px auto 48px;
+      padding: 38px 46px 44px;
+      background: #fff;
+      border: 1px solid #dcdeda;
+      border-radius: 12px;
+      font: 16px/1.55 Arial, sans-serif;
+    }
+    h1 { margin: 0; text-align: center; font-size: 29px; line-height: 1.22; }
+    .subtitle { margin: 8px 0 27px; text-align: center; color: #526059; font-size: 15px; }
+    h2 {
+      margin: 29px 0 14px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid #d9deda;
+      color: #244d40;
+      font-size: 19px;
+      line-height: 1.35;
+    }
+    h3 { margin: 0 0 7px; font-size: 16px; color: #203c33; }
+    p { margin: 7px 0; }
+    math {
+      font-family: "Cambria Math", "STIX Two Math", "Times New Roman", serif;
+      font-size: 1.16em;
+    }
+    .display {
+      display: block;
+      margin: 10px auto;
+      text-align: center;
+      font-size: 1.28em;
+    }
+    .definition, .property, .example, .algorithm, .warning, .summary {
+      break-inside: avoid;
+      border-radius: 8px;
+    }
+    .definition {
+      padding: 16px 18px;
+      background: #f0f6f3;
+      border: 1px solid #cfddd6;
+    }
+    .condition {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #cfddd6;
+      text-align: center;
+      font-weight: 700;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .property {
+      padding: 14px 16px;
+      border: 1px solid #d7ddd9;
+      background: #fbfcfb;
+    }
+    .property .display { margin: 7px auto 4px; font-size: 1.17em; }
+    .hint { margin-top: 8px; color: #526059; font-size: 14px; }
+    .example {
+      margin: 12px 0;
+      padding: 13px 16px;
+      border-left: 4px solid #527b6d;
+      background: #f7f8f6;
+    }
+    .example-title { margin-bottom: 5px; font-weight: 700; color: #24483d; }
+    .steps { margin: 4px 0 0; padding-left: 22px; }
+    .steps li { margin: 5px 0; }
+    .algorithm {
+      padding: 14px 18px;
+      background: #f4f6f8;
+      border-left: 4px solid #6b7882;
+    }
+    .algorithm ol { margin: 0; padding-left: 22px; }
+    .algorithm li { margin: 7px 0; }
+    .warning {
+      padding: 14px 17px;
+      background: #faf7ef;
+      border-left: 4px solid #977839;
+    }
+    .warning ul { margin: 0; padding-left: 22px; }
+    .warning li { margin: 7px 0; }
+    .summary {
+      padding: 16px 18px;
+      border: 2px solid #bfcfc7;
+      background: #f8fbf9;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+    }
+    .summary-grid div { text-align: center; }
+    .arrow { color: #315f50; font-weight: 700; }
+    .small { font-size: 14px; color: #526059; }
+    @media screen and (max-width: 680px) {
+      .page { padding: 26px 20px 34px; }
+      h1 { font-size: 24px; }
+      .grid, .summary-grid { grid-template-columns: 1fr; }
+      math { font-size: 1.08em; }
+      .display { overflow-x: auto; padding: 2px 0; font-size: 1.12em; }
+    }
+    @media print {
+      @page { size: A4; margin: 11mm 12mm; }
+      body { background: #fff; }
+      .page { width: auto; margin: 0; padding: 0; border: 0; border-radius: 0; font-size: 10.5pt; }
+      h1 { font-size: 18pt; }
+      .subtitle { margin-bottom: 4mm; font-size: 9.5pt; }
+      h2 { margin: 5mm 0 2.5mm; padding-bottom: 1mm; font-size: 13pt; break-after: avoid; }
+      h3 { font-size: 11pt; }
+      math { font-size: 1.05em; }
+      .display { margin: 1.5mm auto; font-size: 1.12em; }
+      .definition, .property, .example, .algorithm, .warning, .summary { padding: 2.5mm 3mm; }
+      .grid { gap: 2.5mm; }
+    }
+  </style>
+<link href="../reader.css" rel="stylesheet"><script src="../catalog.js" defer=""></script><script src="../document.js" defer=""></script></head>
+<body>
+  <main class="page">
+    <h1>Свойства логарифмов</h1>
+    <p class="subtitle">Понятный конспект: формулы, алгоритмы и разобранные примеры</p>
+
+    <section>
+      <h2>1. Что такое логарифм</h2>
+      <div class="definition">
+        <p><strong>Логарифм числа</strong> <math><mi>b</mi></math> по основанию <math><mi>a</mi></math> — это показатель степени, в которую нужно возвести <math><mi>a</mi></math>, чтобы получить <math><mi>b</mi></math>.</p>
+        <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>b</mi><mo>=</mo><mi>c</mi><mspace width="0.7em"></mspace><mo>⇔</mo><mspace width="0.7em"></mspace><msup><mi>a</mi><mi>c</mi></msup><mo>=</mo><mi>b</mi></mrow></math>
+        <div class="condition">
+          <math><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.5em"></mspace><mi>a</mi><mo>≠</mo><mn>1</mn><mo>,</mo><mspace width="0.5em"></mspace><mi>b</mi><mo>&gt;</mo><mn>0</mn></mrow></math>
+        </div>
+      </div>
+      <div class="example">
+        <div class="example-title">Пример 1</div>
+        <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>32</mn><mo>=</mo><mn>5</mn></mrow></math>
+        <p>Потому что <math><mrow><msup><mn>2</mn><mn>5</mn></msup><mo>=</mo><mn>32</mn></mrow></math>.</p>
+      </div>
+
+      <h3>Следствия из определения</h3>
+      <div class="grid">
+        <div class="property"><math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mn>1</mn><mo>=</mo><mn>0</mn></mrow></math></div>
+        <div class="property"><math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>a</mi><mo>=</mo><mn>1</mn></mrow></math></div>
+        <div class="property"><math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><msup><mi>a</mi><mi>t</mi></msup><mo>=</mo><mi>t</mi></mrow></math></div>
+        <div class="property"><math class="display"><mrow><msup><mi>a</mi><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>x</mi></mrow></msup><mo>=</mo><mi>x</mi></mrow></math></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Основные свойства логарифмов</h2>
+      <p>Во всех формулах: <math><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.4em"></mspace><mi>y</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.4em"></mspace><mi>a</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.4em"></mspace><mi>a</mi><mo>≠</mo><mn>1</mn></mrow></math>.</p>
+      <div class="grid">
+        <div class="property">
+          <h3>Логарифм произведения</h3>
+          <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo><mo>=</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>x</mi><mo>+</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>y</mi></mrow></math>
+          <p class="hint">Произведение превращается в сумму.</p>
+        </div>
+        <div class="property">
+          <h3>Логарифм частного</h3>
+          <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mo>(</mo><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>)</mo><mo>=</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>x</mi><mo>−</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>y</mi></mrow></math>
+          <p class="hint">Частное превращается в разность.</p>
+        </div>
+        <div class="property">
+          <h3>Логарифм степени</h3>
+          <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><msup><mi>x</mi><mi>r</mi></msup><mo>=</mo><mi>r</mi><mo>·</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>x</mi></mrow></math>
+          <p class="hint">Показатель степени выносится вперёд.</p>
+        </div>
+        <div class="property">
+          <h3>Логарифм корня</h3>
+          <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mroot><mi>x</mi><mi>n</mi></mroot><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>x</mi></mrow></math>
+          <p class="hint">Корень — это степень с показателем <math><mfrac><mn>1</mn><mi>n</mi></mfrac></math>.</p>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-title">Пример 2. Произведение</div>
+        <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>4</mn><mo>+</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>8</mn><mo>=</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mo>(</mo><mn>4</mn><mo>·</mo><mn>8</mn><mo>)</mo><mo>=</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>32</mn><mo>=</mo><mn>5</mn></mrow></math>
+      </div>
+      <div class="example">
+        <div class="example-title">Пример 3. Частное</div>
+        <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mn>3</mn></msub><mn>81</mn><mo>−</mo><msub><mi mathvariant="normal">log</mi><mn>3</mn></msub><mn>3</mn><mo>=</mo><msub><mi mathvariant="normal">log</mi><mn>3</mn></msub><mo>(</mo><mfrac><mn>81</mn><mn>3</mn></mfrac><mo>)</mo><mo>=</mo><msub><mi mathvariant="normal">log</mi><mn>3</mn></msub><mn>27</mn><mo>=</mo><mn>3</mn></mrow></math>
+      </div>
+      <div class="example">
+        <div class="example-title">Пример 4. Степень и корень</div>
+        <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mn>5</mn></msub><msup><mn>125</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi mathvariant="normal">log</mi><mn>5</mn></msub><mn>125</mn><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mrow></math>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Как раскрыть один логарифм</h2>
+      <div class="algorithm">
+        <ol>
+          <li>Произведение замените суммой логарифмов.</li>
+          <li>Деление замените разностью.</li>
+          <li>Показатели степеней вынесите перед логарифмами.</li>
+          <li>Известные логарифмы вычислите.</li>
+        </ol>
+      </div>
+      <div class="example">
+        <div class="example-title">Пример 5</div>
+        <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mo>(</mo><mfrac><mrow><mn>8</mn><msup><mi>x</mi><mn>2</mn></msup></mrow><mrow><mi>y</mi><msqrt><mi>z</mi></msqrt></mrow></mfrac><mo>)</mo></mrow></math>
+        <math class="display"><mrow><mo>=</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>8</mn><mo>+</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>y</mi><mo>−</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><msup><mi>z</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup></mrow></math>
+        <math class="display"><mrow><mo>=</mo><mn>3</mn><mo>+</mo><mn>2</mn><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>x</mi><mo>−</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>y</mi><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>z</mi></mrow></math>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Как собрать выражение в один логарифм</h2>
+      <div class="algorithm">
+        <ol>
+          <li>Коэффициенты перед логарифмами перенесите в показатели степеней.</li>
+          <li>Сумму логарифмов замените логарифмом произведения.</li>
+          <li>Разность логарифмов замените логарифмом частного.</li>
+        </ol>
+      </div>
+      <div class="example">
+        <div class="example-title">Пример 6</div>
+        <math class="display"><mrow><mn>2</mn><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>x</mi><mo>−</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>y</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>z</mi></mrow></math>
+        <math class="display"><mrow><mo>=</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>y</mi><mo>+</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><msqrt><mi>z</mi></msqrt></mrow></math>
+        <math class="display"><mrow><mo>=</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mo>(</mo><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><msqrt><mi>z</mi></msqrt></mrow><mi>y</mi></mfrac><mo>)</mo></mrow></math>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. Переход к новому основанию</h2>
+      <div class="definition">
+        <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>b</mi><mo>=</mo><mfrac><mrow><msub><mi mathvariant="normal">log</mi><mi>c</mi></msub><mi>b</mi></mrow><mrow><msub><mi mathvariant="normal">log</mi><mi>c</mi></msub><mi>a</mi></mrow></mfrac></mrow></math>
+        <p class="condition">Новое основание: <math><mrow><mi>c</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.4em"></mspace><mi>c</mi><mo>≠</mo><mn>1</mn></mrow></math>.</p>
+      </div>
+      <p>Полезные следствия:</p>
+      <div class="grid">
+        <div class="property"><math class="display"><mrow><mfrac><mn>1</mn><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>b</mi></mrow></mfrac><mo>=</mo><msub><mi mathvariant="normal">log</mi><mi>b</mi></msub><mi>a</mi></mrow></math></div>
+        <div class="property"><math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>b</mi><mo>·</mo><msub><mi mathvariant="normal">log</mi><mi>b</mi></msub><mi>c</mi><mo>=</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>c</mi></mrow></math></div>
+      </div>
+      <div class="example">
+        <div class="example-title">Пример 7</div>
+        <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>3</mn><mo>·</mo><msub><mi mathvariant="normal">log</mi><mn>3</mn></msub><mn>8</mn><mo>=</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>8</mn><mo>=</mo><mn>3</mn></mrow></math>
+      </div>
+      <div class="example">
+        <div class="example-title">Пример 8</div>
+        <math class="display"><mrow><mfrac><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>7</mn></mrow><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>49</mn></mrow></mfrac><mo>=</mo><msub><mi mathvariant="normal">log</mi><mn>49</mn></msub><mn>7</mn><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. Десятичный и натуральный логарифмы</h2>
+      <div class="grid">
+        <div class="property">
+          <h3>Десятичный логарифм</h3>
+          <math class="display"><mrow><mi mathvariant="normal">lg</mi><mi>x</mi><mo>=</mo><msub><mi mathvariant="normal">log</mi><mn>10</mn></msub><mi>x</mi></mrow></math>
+        </div>
+        <div class="property">
+          <h3>Натуральный логарифм</h3>
+          <math class="display"><mrow><mi mathvariant="normal">ln</mi><mi>x</mi><mo>=</mo><msub><mi mathvariant="normal">log</mi><mi>e</mi></msub><mi>x</mi><mo>,</mo><mspace width="0.5em"></mspace><mi>e</mi><mo>≈</mo><mn>2,718</mn></mrow></math>
+        </div>
+      </div>
+      <div class="example">
+        <div class="example-title">Пример 9</div>
+        <math class="display"><mrow><mi mathvariant="normal">lg</mi><mn>1000</mn><mo>=</mo><mn>3</mn><mo>;</mo><mspace width="1em"></mspace><mi mathvariant="normal">lg</mi><mn>0,01</mn><mo>=</mo><mo>−</mo><mn>2</mn><mo>;</mo><mspace width="1em"></mspace><mi mathvariant="normal">ln</mi><msup><mi>e</mi><mn>4</mn></msup><mo>=</mo><mn>4</mn></mrow></math>
+      </div>
+      <p class="small">Для <math><mi mathvariant="normal">lg</mi></math> и <math><mi mathvariant="normal">ln</mi></math> действуют все обычные свойства логарифмов.</p>
+    </section>
+
+    <section>
+      <h2>7. Полностью разобранные смешанные примеры</h2>
+      <div class="example">
+        <div class="example-title">Пример 10</div>
+        <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>48</mn><mo>−</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>3</mn><mo>−</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>2</mn></mrow></math>
+        <math class="display"><mrow><mo>=</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mo>(</mo><mfrac><mn>48</mn><mrow><mn>3</mn><mo>·</mo><mn>2</mn></mrow></mfrac><mo>)</mo><mo>=</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>8</mn><mo>=</mo><mn>3</mn></mrow></math>
+      </div>
+      <div class="example">
+        <div class="example-title">Пример 11</div>
+        <math class="display"><mrow><mn>2</mn><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>3</mn><mo>+</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mo>(</mo><mfrac><mn>8</mn><mn>9</mn></mfrac><mo>)</mo></mrow></math>
+        <math class="display"><mrow><mo>=</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>9</mn><mo>+</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mo>(</mo><mfrac><mn>8</mn><mn>9</mn></mfrac><mo>)</mo><mo>=</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>8</mn><mo>=</mo><mn>3</mn></mrow></math>
+      </div>
+      <div class="example">
+        <div class="example-title">Пример 12</div>
+        <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mo>(</mo><msup><mi>a</mi><mn>3</mn></msup><msup><mi>x</mi><mn>2</mn></msup><mo>)</mo><mo>−</mo><mn>2</mn><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>x</mi><mo>+</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mo>(</mo><mfrac><mn>1</mn><mi>a</mi></mfrac><mo>)</mo></mrow></math>
+        <math class="display"><mrow><mo>=</mo><mn>3</mn><mo>+</mo><mn>2</mn><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>x</mi><mo>−</mo><mn>2</mn><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>x</mi><mo>−</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow></math>
+      </div>
+    </section>
+
+    <section>
+      <h2>8. Частые ошибки</h2>
+      <div class="warning">
+        <ul>
+          <li><math><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo><mo>≠</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>x</mi><mo>+</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>y</mi></mrow></math>. Для суммы свойства нет.</li>
+          <li><math><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mo>(</mo><mi>x</mi><mo>−</mo><mi>y</mi><mo>)</mo><mo>≠</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>x</mi><mo>−</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>y</mi></mrow></math>. Для разности свойства тоже нет.</li>
+          <li>Объединять логарифмы можно только при одинаковых основаниях.</li>
+          <li>Аргумент каждого логарифма должен быть строго больше нуля.</li>
+          <li>Коэффициент перед логарифмом становится степенью всего аргумента.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>9. Краткая памятка</h2>
+      <div class="summary">
+        <div class="summary-grid">
+          <div><strong>Умножение</strong><br><span class="arrow">↔</span><br>сумма логарифмов</div>
+          <div><strong>Деление</strong><br><span class="arrow">↔</span><br>разность логарифмов</div>
+          <div><strong>Степень аргумента</strong><br><span class="arrow">↔</span><br>коэффициент перед логарифмом</div>
+          <div><strong>Разные основания</strong><br><span class="arrow">→</span><br>переход к новому основанию</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+</body></html>
