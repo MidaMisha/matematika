@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ru"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Конспект. Логарифмическая функция и логарифмические уравнения</title>
+  <style>
+    *{box-sizing:border-box} body{margin:0;background:#f2f3f1;color:#17201c}
+    .page{width:min(960px,calc(100% - 24px));margin:24px auto 48px;padding:38px 46px 44px;background:#fff;border:1px solid #dcdeda;border-radius:12px;font:16px/1.55 Arial,sans-serif}
+    h1{margin:0;text-align:center;font-size:28px;line-height:1.23}.subtitle{margin:8px 0 27px;text-align:center;color:#526059;font-size:15px}
+    h2{margin:29px 0 14px;padding-bottom:7px;border-bottom:1px solid #d9deda;color:#244d40;font-size:19px;line-height:1.35}
+    h3{margin:0 0 7px;color:#203c33;font-size:16px}p{margin:7px 0}math{font-family:"Cambria Math","STIX Two Math","Times New Roman",serif;font-size:1.14em}
+    .display{display:block;margin:9px auto;text-align:center;font-size:1.24em}.box,.example,.algorithm,.warning,.graph-card{break-inside:avoid;border-radius:8px}
+    .box{padding:15px 18px;background:#f0f6f3;border:1px solid #cfddd6}.example{margin:12px 0;padding:13px 16px;border-left:4px solid #527b6d;background:#f7f8f6}
+    .example-title{margin-bottom:5px;font-weight:700;color:#24483d}.algorithm{padding:14px 18px;background:#f4f6f8;border-left:4px solid #6b7882}.algorithm ol{margin:0;padding-left:22px}.algorithm li{margin:7px 0}
+    .warning{padding:14px 17px;background:#faf7ef;border-left:4px solid #977839}.warning ul{margin:0;padding-left:22px}.warning li{margin:7px 0}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.graph-card{padding:12px;border:1px solid #d7ddd9;background:#fbfcfb;text-align:center}.graph-card svg{width:100%;height:auto;max-height:260px}
+    table{width:100%;border-collapse:collapse;margin:12px 0;break-inside:avoid}th,td{padding:10px 12px;border:1px solid #d7ddd9;vertical-align:middle}th{background:#eef3f0;text-align:left;font-size:14px}td:first-child{width:35%;font-weight:700}
+    .tag{display:inline-block;margin:2px 4px 2px 0;padding:2px 7px;border:1px solid #cfd8d3;border-radius:12px;background:#fff;font-size:13px}.small{font-size:14px;color:#526059}
+    @media(max-width:700px){.page{padding:26px 20px 34px}h1{font-size:23px}.grid{grid-template-columns:1fr}math{font-size:1.06em}.display{overflow-x:auto;padding:2px 0;font-size:1.1em}table,tbody,tr,td{display:block;width:100%}thead{display:none}td:first-child{width:100%;background:#eef3f0}td+td{border-top:0;margin-bottom:7px}}
+    @media print{@page{size:A4;margin:11mm 12mm}body{background:#fff}.page{width:auto;margin:0;padding:0;border:0;border-radius:0;font-size:10.3pt}h1{font-size:17pt}.subtitle{margin-bottom:4mm;font-size:9pt}h2{margin:5mm 0 2mm;padding-bottom:1mm;font-size:12.5pt;break-after:avoid}h3{font-size:10.8pt}math{font-size:1.03em}.display{margin:1.5mm auto;font-size:1.1em}.box,.example,.algorithm,.warning,.graph-card{padding:2.5mm 3mm}.grid{gap:2.5mm}.graph-card svg{max-height:58mm}th,td{padding:2mm 2.5mm}}
+  </style>
+<link href="../reader.css" rel="stylesheet"><script src="../catalog.js" defer=""></script><script src="../document.js" defer=""></script></head>
+<body><main class="page">
+  <h1>Логарифмическая функция и логарифмические уравнения</h1>
+  <p class="subtitle">Свойства, графики и основные методы решения</p>
+
+  <section><h2>1. Логарифмическая функция</h2>
+    <div class="box">
+      <math class="display"><mrow><mi>y</mi><mo>=</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>x</mi><mo>,</mo><mspace width="0.8em"></mspace><mi>a</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.4em"></mspace><mi>a</mi><mo>≠</mo><mn>1</mn></mrow></math>
+      <p>Логарифмическая функция обратна показательной функции <math><mrow><mi>y</mi><mo>=</mo><msup><mi>a</mi><mi>x</mi></msup></mrow></math>. Их графики симметричны относительно прямой <math><mrow><mi>y</mi><mo>=</mo><mi>x</mi></mrow></math>.</p>
+    </div>
+    <table><thead><tr><th>Свойство</th><th>Значение</th></tr></thead><tbody>
+      <tr><td>Область определения</td><td><math><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math></td></tr>
+      <tr><td>Область значений</td><td>Все действительные числа</td></tr>
+      <tr><td>Общая точка</td><td><math><mrow><mo>(</mo><mn>1</mn><mo>;</mo><mn>0</mn><mo>)</mo></mrow></math>, потому что <math><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mn>1</mn><mo>=</mo><mn>0</mn></mrow></math></td></tr>
+      <tr><td>Вертикальная асимптота</td><td><math><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>; график не пересекает ось <math><mi>Oy</mi></math></td></tr>
+      <tr><td>При <math><mrow><mi>a</mi><mo>&gt;</mo><mn>1</mn></mrow></math></td><td>Функция возрастает</td></tr>
+      <tr><td>При <math><mrow><mn>0</mn><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mn>1</mn></mrow></math></td><td>Функция убывает</td></tr>
+    </tbody></table>
+  </section>
+
+  <section><h2>2. Два вида графика</h2>
+    <div class="grid">
+      <div class="graph-card"><h3><math><mrow><mi>a</mi><mo>&gt;</mo><mn>1</mn></mrow></math>: функция возрастает</h3>
+        <svg viewBox="0 0 330 235" role="img" aria-label="График y равен log по основанию 2 от x">
+          <line x1="42" y1="18" x2="42" y2="217" stroke="#263b34" stroke-width="1.5"></line><line x1="18" y1="132" x2="315" y2="132" stroke="#263b34" stroke-width="1.5"></line>
+          <path d="M48 214 C53 190 61 173 72 158 C88 139 103 126 130 108 C174 78 221 59 303 38" fill="none" stroke="#2f6b59" stroke-width="3"></path>
+          <line x1="42" y1="18" x2="42" y2="217" stroke="#7b8b84" stroke-dasharray="4 4"></line><circle cx="92" cy="132" r="4" fill="#17201c"></circle><circle cx="142" cy="97" r="4" fill="#17201c"></circle><circle cx="67" cy="167" r="4" fill="#17201c"></circle>
+          <text x="299" y="123" font-size="13">x</text><text x="49" y="29" font-size="13">y</text><text x="97" y="148" font-size="12">1</text><text x="146" y="91" font-size="12">(2; 1)</text><text x="72" y="182" font-size="12">(1/2; −1)</text><text x="178" y="48" font-size="14" fill="#2f6b59">y = log₂x</text>
+        </svg>
+      </div>
+      <div class="graph-card"><h3><math><mrow><mn>0</mn><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mn>1</mn></mrow></math>: функция убывает</h3>
+        <svg viewBox="0 0 330 235" role="img" aria-label="График y равен log по основанию одна вторая от x">
+          <line x1="42" y1="18" x2="42" y2="217" stroke="#263b34" stroke-width="1.5"></line><line x1="18" y1="132" x2="315" y2="132" stroke="#263b34" stroke-width="1.5"></line>
+          <path d="M48 31 C53 55 61 79 72 96 C88 116 103 132 130 151 C174 181 221 199 303 216" fill="none" stroke="#2f6b59" stroke-width="3"></path>
+          <line x1="42" y1="18" x2="42" y2="217" stroke="#7b8b84" stroke-dasharray="4 4"></line><circle cx="92" cy="132" r="4" fill="#17201c"></circle><circle cx="67" cy="97" r="4" fill="#17201c"></circle><circle cx="142" cy="167" r="4" fill="#17201c"></circle>
+          <text x="299" y="123" font-size="13">x</text><text x="49" y="29" font-size="13">y</text><text x="97" y="148" font-size="12">1</text><text x="70" y="91" font-size="12">(1/2; 1)</text><text x="147" y="182" font-size="12">(2; −1)</text><text x="167" y="46" font-size="14" fill="#2f6b59">y = log₁⁄₂x</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section><h2>3. Сравнение логарифмов</h2>
+    <div class="algorithm"><ol>
+      <li>Проверьте, что основания одинаковы.</li><li>Определите: функция возрастает или убывает.</li><li>Сравните аргументы. При основании меньше единицы знак сравнения меняется.</li>
+    </ol></div>
+    <div class="example"><div class="example-title">Пример 1</div>
+      <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>5</mn><mo>&lt;</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mn>7</mn></mrow></math><p>Основание <math><mn>2</mn></math> больше единицы, поэтому большему аргументу соответствует большее значение.</p>
+    </div>
+    <div class="example"><div class="example-title">Пример 2</div>
+      <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msub><mn>2</mn><mo>&gt;</mo><msub><mi mathvariant="normal">log</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msub><mn>4</mn></mrow></math><p>Основание находится между нулём и единицей, поэтому функция убывает.</p>
+    </div>
+  </section>
+
+  <section><h2>4. Что такое логарифмическое уравнение</h2>
+    <p>Логарифмическим называют уравнение, в котором неизвестная находится под знаком логарифма или в его основании.</p>
+    <div class="box"><p><strong>Сначала всегда записываем ОДЗ:</strong> аргумент каждого логарифма должен быть положительным; основание — положительным и не равным единице.</p></div>
+  </section>
+
+  <section><h2>5. Простейшие уравнения</h2>
+    <div class="box"><math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>b</mi><mspace width="0.7em"></mspace><mo>⇔</mo><mspace width="0.7em"></mspace><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msup><mi>a</mi><mi>b</mi></msup></mrow></math></div>
+    <div class="example"><div class="example-title">Пример 3</div>
+      <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mn>3</mn></msub><mo>(</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>=</mo><mn>2</mn></mrow></math>
+      <math class="display"><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn><mo>=</mo><msup><mn>3</mn><mn>2</mn></msup><mo>=</mo><mn>9</mn><mo>;</mo><mspace width="0.7em"></mspace><mi>x</mi><mo>=</mo><mn>4</mn></mrow></math><p>Проверка ОДЗ: <math><mrow><mn>2</mn><mo>·</mo><mn>4</mn><mo>+</mo><mn>1</mn><mo>&gt;</mo><mn>0</mn></mrow></math>.</p>
+    </div>
+  </section>
+
+  <section><h2>6. Метод потенцирования</h2>
+    <p><strong>Потенцирование</strong> — переход от равенства логарифмов с одинаковым основанием к равенству их аргументов.</p>
+    <div class="box"><math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo><mspace width="0.6em"></mspace><mo>⇔</mo><mspace width="0.6em"></mspace><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow></math><p class="small">При этом оба аргумента должны быть положительными.</p></div>
+    <div class="example"><div class="example-title">Пример 4</div>
+      <p>ОДЗ: <math><mrow><mi>x</mi><mo>+</mo><mn>3</mn><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.4em"></mspace><mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo>&gt;</mo><mn>0</mn></mrow></math>.</p>
+      <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mo>(</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo>)</mo><mo>=</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mo>(</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow></math>
+      <math class="display"><mrow><mi>x</mi><mo>+</mo><mn>3</mn><mo>=</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo>;</mo><mspace width="0.7em"></mspace><mi>x</mi><mo>=</mo><mn>4</mn></mrow></math>
+    </div>
+  </section>
+
+  <section><h2>7. Использование свойств логарифмов</h2>
+    <p>Сумму логарифмов объединяем в логарифм произведения, разность — в логарифм частного.</p>
+    <div class="example"><div class="example-title">Пример 5</div>
+      <p>ОДЗ: <math><mrow><mi>x</mi><mo>&gt;</mo><mn>2</mn></mrow></math>.</p>
+      <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>x</mi><mo>+</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mo>(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo>)</mo><mo>=</mo><mn>3</mn></mrow></math>
+      <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mo>(</mo><mi>x</mi><mo>(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo>)</mo><mo>)</mo><mo>=</mo><mn>3</mn></mrow></math>
+      <math class="display"><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn><mi>x</mi><mo>=</mo><mn>8</mn><mo>;</mo><mspace width="0.5em"></mspace><mi>x</mi><mo>=</mo><mn>4</mn><mspace width="0.3em"></mspace><mtext>или</mtext><mspace width="0.3em"></mspace><mi>x</mi><mo>=</mo><mo>−</mo><mn>2</mn></mrow></math><p>По ОДЗ подходит только <math><mrow><mi>x</mi><mo>=</mo><mn>4</mn></mrow></math>.</p>
+    </div>
+  </section>
+
+  <section><h2>8. Метод замены переменной</h2>
+    <div class="example"><div class="example-title">Пример 6</div>
+      <math class="display"><mrow><msup><mrow><mo>(</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup><mo>−</mo><mn>5</mn><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>x</mi><mo>+</mo><mn>6</mn><mo>=</mo><mn>0</mn></mrow></math>
+      <p>Пусть <math><mrow><mi>t</mi><mo>=</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>x</mi></mrow></math>. Тогда:</p>
+      <math class="display"><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>−</mo><mn>5</mn><mi>t</mi><mo>+</mo><mn>6</mn><mo>=</mo><mn>0</mn><mo>;</mo><mspace width="0.6em"></mspace><mi>t</mi><mo>=</mo><mn>2</mn><mspace width="0.3em"></mspace><mtext>или</mtext><mspace width="0.3em"></mspace><mi>t</mi><mo>=</mo><mn>3</mn></mrow></math>
+      <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>x</mi><mo>=</mo><mn>2</mn><mo>⇒</mo><mi>x</mi><mo>=</mo><mn>4</mn><mo>;</mo><mspace width="0.7em"></mspace><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>x</mi><mo>=</mo><mn>3</mn><mo>⇒</mo><mi>x</mi><mo>=</mo><mn>8</mn></mrow></math>
+    </div>
+  </section>
+
+  <section><h2>9. Функционально-графический метод</h2>
+    <p>Левую и правую части рассматриваем как две функции. Решения уравнения — абсциссы точек пересечения их графиков.</p>
+    <div class="example"><div class="example-title">Пример 7</div>
+      <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>x</mi><mo>=</mo><mi>x</mi><mo>−</mo><mn>1</mn></mrow></math>
+      <p>Графики <math><mrow><mi>y</mi><mo>=</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>x</mi></mrow></math> и <math><mrow><mi>y</mi><mo>=</mo><mi>x</mi><mo>−</mo><mn>1</mn></mrow></math> пересекаются при <math><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math> и <math><mrow><mi>x</mi><mo>=</mo><mn>2</mn></mrow></math>.</p>
+    </div>
+  </section>
+
+  <section><h2>10. Общий алгоритм решения</h2>
+    <div class="algorithm"><ol>
+      <li>Записать ОДЗ.</li><li>Упростить выражение с помощью свойств логарифмов.</li><li>Выбрать метод: по определению, потенцирование, замена переменной или графики.</li><li>Решить полученное уравнение.</li><li>Проверить найденные корни по ОДЗ.</li>
+    </ol></div>
+  </section>
+
+  <section><h2>11. Частые ошибки</h2>
+    <div class="warning"><ul>
+      <li>Забывают записать ОДЗ и оставляют посторонние корни.</li><li>Потенцируют логарифмы с разными основаниями.</li><li>Используют несуществующие формулы для суммы или разности внутри логарифма.</li><li>После замены переменной не возвращаются к исходной переменной.</li><li>Не проверяют, что основание логарифма положительно и не равно единице.</li>
+    </ul></div>
+  </section>
+</main>
+</body></html>
