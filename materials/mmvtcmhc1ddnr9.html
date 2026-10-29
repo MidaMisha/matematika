@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ru"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Конспект. Логарифмические неравенства и системы уравнений</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f2f3f1;color:#17201c}.page{width:min(960px,calc(100% - 24px));margin:24px auto 48px;padding:38px 46px 44px;background:#fff;border:1px solid #dcdeda;border-radius:12px;font:16px/1.55 Arial,sans-serif}
+    h1{margin:0;text-align:center;font-size:28px;line-height:1.23}.subtitle{margin:8px 0 27px;text-align:center;color:#526059;font-size:15px}h2{margin:29px 0 14px;padding-bottom:7px;border-bottom:1px solid #d9deda;color:#244d40;font-size:19px;line-height:1.35}h3{margin:0 0 7px;color:#203c33;font-size:16px}p{margin:7px 0}
+    math{font-family:"Cambria Math","STIX Two Math","Times New Roman",serif;font-size:1.14em}.display{display:block;margin:9px auto;text-align:center;font-size:1.24em}.box,.example,.algorithm,.warning{break-inside:avoid;border-radius:8px}.box{padding:15px 18px;background:#f0f6f3;border:1px solid #cfddd6}.example{margin:12px 0;padding:13px 16px;border-left:4px solid #527b6d;background:#f7f8f6}.example-title{margin-bottom:5px;font-weight:700;color:#24483d}.algorithm{padding:14px 18px;background:#f4f6f8;border-left:4px solid #6b7882}.algorithm ol{margin:0;padding-left:22px}.algorithm li{margin:7px 0}.warning{padding:14px 17px;background:#faf7ef;border-left:4px solid #977839}.warning ul{margin:0;padding-left:22px}.warning li{margin:7px 0}
+    table{width:100%;border-collapse:collapse;margin:12px 0;break-inside:avoid}th,td{padding:10px 12px;border:1px solid #d7ddd9;vertical-align:middle}th{background:#eef3f0;text-align:left;font-size:14px}.small{font-size:14px;color:#526059}.answer{font-weight:700;color:#244d40}
+    @media(max-width:700px){.page{padding:26px 20px 34px}h1{font-size:23px}math{font-size:1.06em}.display{overflow-x:auto;padding:2px 0;font-size:1.1em}table,tbody,tr,td{display:block;width:100%}thead{display:none}td:first-child{background:#eef3f0}td+td{border-top:0;margin-bottom:7px}}
+    @media print{@page{size:A4;margin:11mm 12mm}body{background:#fff}.page{width:auto;margin:0;padding:0;border:0;border-radius:0;font-size:10.3pt}h1{font-size:17pt}.subtitle{margin-bottom:4mm;font-size:9pt}h2{margin:5mm 0 2mm;padding-bottom:1mm;font-size:12.5pt;break-after:avoid}h3{font-size:10.8pt}math{font-size:1.03em}.display{margin:1.5mm auto;font-size:1.1em}.box,.example,.algorithm,.warning{padding:2.5mm 3mm}th,td{padding:2mm 2.5mm}}
+  </style>
+<link href="../reader.css" rel="stylesheet"><script src="../catalog.js" defer=""></script><script src="../document.js" defer=""></script></head>
+<body><main class="page">
+  <h1>Логарифмические неравенства и системы логарифмических уравнений</h1>
+  <p class="subtitle">Основной блок — неравенства. Системы рассматриваются как итоговое закрепление.</p>
+
+  <section><h2>1. С чего начинается решение</h2>
+    <div class="box"><p><strong>Область допустимых значений:</strong> аргумент каждого логарифма должен быть положительным, а основание — положительным и не равным единице.</p>
+      <math class="display"><mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&gt;</mo><mn>0</mn><mo>;</mo><mspace width="1em"></mspace><mi>a</mi><mo>&gt;</mo><mn>0</mn><mo>;</mo><mspace width="0.4em"></mspace><mi>a</mi><mo>≠</mo><mn>1</mn></mrow></math>
+    </div>
+    <p>ОДЗ записывают до преобразований. Оно помогает исключить значения, при которых исходное неравенство или система не имеют смысла.</p>
+  </section>
+
+  <section><h2>2. Главное правило сравнения</h2>
+    <table><thead><tr><th>Основание</th><th>Переход к сравнению аргументов</th></tr></thead><tbody>
+      <tr><td><math><mrow><mi>a</mi><mo>&gt;</mo><mn>1</mn></mrow></math></td><td>Логарифмическая функция возрастает, поэтому знак сохраняется:<math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&gt;</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>⇔</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&gt;</mo><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow></math></td></tr>
+      <tr><td><math><mrow><mn>0</mn><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mn>1</mn></mrow></math></td><td>Логарифмическая функция убывает, поэтому знак меняется:<math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&gt;</mo><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>⇔</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&lt;</mo><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow></math></td></tr>
+    </tbody></table>
+    <p class="small">В обоих случаях необходимо дополнительно учитывать положительность аргументов.</p>
+  </section>
+
+  <section><h2>3. Простейшие неравенства при основании больше единицы</h2>
+    <div class="box"><math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&gt;</mo><mi>b</mi><mo>⇔</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&gt;</mo><msup><mi>a</mi><mi>b</mi></msup><mo>,</mo><mspace width="0.8em"></mspace><mi>a</mi><mo>&gt;</mo><mn>1</mn></mrow></math></div>
+    <div class="example"><div class="example-title">Пример 1</div>
+      <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mo>(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>&gt;</mo><mn>3</mn></mrow></math>
+      <math class="display"><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo>&gt;</mo><msup><mn>2</mn><mn>3</mn></msup><mo>;</mo><mspace width="0.8em"></mspace><mn>3</mn><mi>x</mi><mo>&gt;</mo><mn>9</mn><mo>;</mo><mspace width="0.8em"></mspace><mi>x</mi><mo>&gt;</mo><mn>3</mn></mrow></math>
+      <p class="answer">Ответ: <math><mrow><mi>x</mi><mo>&gt;</mo><mn>3</mn></mrow></math>.</p>
+    </div>
+  </section>
+
+  <section><h2>4. Простейшие неравенства при основании от нуля до единицы</h2>
+    <div class="box"><math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mi>a</mi></msub><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>≥</mo><mi>b</mi><mo>⇔</mo><mn>0</mn><mo>&lt;</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>≤</mo><msup><mi>a</mi><mi>b</mi></msup><mo>,</mo><mspace width="0.8em"></mspace><mn>0</mn><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mn>1</mn></mrow></math></div>
+    <div class="example"><div class="example-title">Пример 2</div>
+      <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msub><mo>(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>≥</mo><mo>−</mo><mn>2</mn></mrow></math>
+      <p>Знак меняется, а аргумент остаётся положительным:</p>
+      <math class="display"><mrow><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>≤</mo><msup><mrow><mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>)</mo></mrow><mrow><mo>−</mo><mn>2</mn></mrow></msup><mo>=</mo><mn>4</mn></mrow></math>
+      <p class="answer">Ответ: <math><mrow><mo>−</mo><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>≤</mo><mn>3</mn></mrow></math>.</p>
+    </div>
+  </section>
+
+  <section><h2>5. Логарифмы с одинаковыми основаниями</h2>
+    <div class="example"><div class="example-title">Пример 3</div>
+      <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mn>3</mn></msub><mo>(</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>≤</mo><msub><mi mathvariant="normal">log</mi><mn>3</mn></msub><mo>(</mo><mi>x</mi><mo>+</mo><mn>5</mn><mo>)</mo></mrow></math>
+      <p>ОДЗ: <math><mrow><mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.5em"></mspace><mi>x</mi><mo>+</mo><mn>5</mn><mo>&gt;</mo><mn>0</mn></mrow></math>, поэтому <math><mrow><mi>x</mi><mo>&gt;</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>.</p>
+      <p>Основание больше единицы: <math><mrow><mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo>≤</mo><mi>x</mi><mo>+</mo><mn>5</mn></mrow></math>, откуда <math><mrow><mi>x</mi><mo>≤</mo><mn>6</mn></mrow></math>.</p>
+      <p class="answer">Ответ: <math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>&lt;</mo><mi>x</mi><mo>≤</mo><mn>6</mn></mrow></math>.</p>
+    </div>
+  </section>
+
+  <section><h2>6. Использование свойств логарифмов</h2>
+    <p>Сначала объединяем логарифмы, затем переходим к обычному неравенству.</p>
+    <div class="example"><div class="example-title">Пример 4</div>
+      <math class="display"><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mo>(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>+</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mo>(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo>)</mo><mo>&lt;</mo><mn>3</mn></mrow></math>
+      <p>ОДЗ: <math><mrow><mi>x</mi><mo>&gt;</mo><mn>3</mn></mrow></math>.</p>
+      <math class="display"><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo>)</mo><mo>&lt;</mo><mn>8</mn><mo>⇒</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>x</mi><mo>−</mo><mn>5</mn><mo>&lt;</mo><mn>0</mn></mrow></math>
+      <p>Получаем <math><mrow><mo>−</mo><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>5</mn></mrow></math>. С учётом ОДЗ:</p>
+      <p class="answer">Ответ: <math><mrow><mn>3</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>5</mn></mrow></math>.</p>
+    </div>
+  </section>
+
+  <section><h2>7. Общий алгоритм решения неравенства</h2>
+    <div class="algorithm"><ol>
+      <li>Записать ОДЗ.</li>
+      <li>Привести логарифмы к одинаковому основанию или объединить их с помощью свойств.</li>
+      <li>Определить, возрастает или убывает логарифмическая функция.</li>
+      <li>Перейти к неравенству без логарифмов.</li>
+      <li>Решить полученное линейное, квадратное или рациональное неравенство.</li>
+      <li>Пересечь результат с ОДЗ и записать ответ промежутками.</li>
+    </ol></div>
+  </section>
+
+  <section><h2>8. Частые ошибки</h2>
+    <div class="warning"><ul>
+      <li>Не меняют знак неравенства при основании <math><mrow><mn>0</mn><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mn>1</mn></mrow></math>.</li>
+      <li>Забывают условие положительности аргумента.</li>
+      <li>Объединяют логарифмы с разными основаниями.</li>
+      <li>Теряют строгую или нестрогую границу промежутка.</li>
+      <li>Не пересекают найденное решение с ОДЗ.</li>
+    </ul></div>
+  </section>
+
+  <section><h2>9. Системы логарифмических уравнений</h2>
+    <p>В системах обычно применяются те же приёмы, что и в обычных логарифмических уравнениях: потенцирование, свойства логарифмов и замена переменных. Главное — записать общее ОДЗ.</p>
+    <div class="algorithm"><ol>
+      <li>Записать условия существования всех логарифмов.</li>
+      <li>Преобразовать каждое уравнение системы.</li>
+      <li>Получить алгебраическую систему и решить её.</li>
+      <li>Проверить каждую пару по ОДЗ.</li>
+    </ol></div>
+  </section>
+
+  <section><h2>10. Системы через произведение и отношение</h2>
+    <div class="example"><div class="example-title">Пример 5</div>
+      <math class="display"><mfenced open="{" close=""><mtable><mtr><mtd><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>x</mi><mo>+</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>y</mi><mo>=</mo><mn>3</mn></mtd></mtr><mtr><mtd><mi>x</mi><mo>−</mo><mi>y</mi><mo>=</mo><mn>2</mn></mtd></mtr></mtable></mfenced></math>
+      <p>ОДЗ: <math><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.4em"></mspace><mi>y</mi><mo>&gt;</mo><mn>0</mn></mrow></math>. Из первого уравнения: <math><mrow><mi>x</mi><mi>y</mi><mo>=</mo><mn>8</mn></mrow></math>. Подставим <math><mrow><mi>x</mi><mo>=</mo><mi>y</mi><mo>+</mo><mn>2</mn></mrow></math>:</p>
+      <math class="display"><mrow><mi>y</mi><mo>(</mo><mi>y</mi><mo>+</mo><mn>2</mn><mo>)</mo><mo>=</mo><mn>8</mn><mo>⇒</mo><mi>y</mi><mo>=</mo><mn>2</mn><mo>,</mo><mspace width="0.5em"></mspace><mi>x</mi><mo>=</mo><mn>4</mn></mrow></math>
+      <p class="answer">Ответ: <math><mrow><mo>(</mo><mn>4</mn><mo>;</mo><mn>2</mn><mo>)</mo></mrow></math>.</p>
+    </div>
+    <div class="example"><div class="example-title">Пример 6</div>
+      <math class="display"><mfenced open="{" close=""><mtable><mtr><mtd><msub><mi mathvariant="normal">log</mi><mn>3</mn></msub><mi>x</mi><mo>+</mo><msub><mi mathvariant="normal">log</mi><mn>3</mn></msub><mi>y</mi><mo>=</mo><mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>10</mn></mtd></mtr></mtable></mfenced></math>
+      <p>Получаем <math><mrow><mi>x</mi><mi>y</mi><mo>=</mo><mn>9</mn></mrow></math> и <math><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>10</mn></mrow></math>. Числа <math><mi>x</mi></math> и <math><mi>y</mi></math> — корни уравнения <math><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>−</mo><mn>10</mn><mi>t</mi><mo>+</mo><mn>9</mn><mo>=</mo><mn>0</mn></mrow></math>.</p>
+      <p class="answer">Ответ: <math><mrow><mo>(</mo><mn>1</mn><mo>;</mo><mn>9</mn><mo>)</mo></mrow></math> и <math><mrow><mo>(</mo><mn>9</mn><mo>;</mo><mn>1</mn><mo>)</mo></mrow></math>.</p>
+    </div>
+  </section>
+
+  <section><h2>11. Замена логарифмов новыми переменными</h2>
+    <div class="example"><div class="example-title">Пример 7</div>
+      <math class="display"><mfenced open="{" close=""><mtable><mtr><mtd><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>x</mi><mo>+</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>y</mi><mo>=</mo><mn>5</mn></mtd></mtr><mtr><mtd><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>x</mi><mo>−</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>y</mi><mo>=</mo><mn>1</mn></mtd></mtr></mtable></mfenced></math>
+      <p>Пусть <math><mrow><mi>u</mi><mo>=</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>x</mi></mrow></math>, <math><mrow><mi>v</mi><mo>=</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mi>y</mi></mrow></math>. Тогда <math><mrow><mi>u</mi><mo>+</mo><mi>v</mi><mo>=</mo><mn>5</mn></mrow></math>, <math><mrow><mi>u</mi><mo>−</mo><mi>v</mi><mo>=</mo><mn>1</mn></mrow></math>, поэтому <math><mrow><mi>u</mi><mo>=</mo><mn>3</mn><mo>,</mo><mspace width="0.4em"></mspace><mi>v</mi><mo>=</mo><mn>2</mn></mrow></math>.</p>
+      <p class="answer">Ответ: <math><mrow><mi>x</mi><mo>=</mo><mn>8</mn><mo>,</mo><mspace width="0.4em"></mspace><mi>y</mi><mo>=</mo><mn>4</mn></mrow></math>.</p>
+    </div>
+    <div class="example"><div class="example-title">Пример 8</div>
+      <math class="display"><mfenced open="{" close=""><mtable><mtr><mtd><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mo>(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>+</mo><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mo>(</mo><mi>y</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>=</mo><mn>3</mn></mtd></mtr><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>8</mn></mtd></mtr></mtable></mfenced></math>
+      <p>ОДЗ: <math><mrow><mi>x</mi><mo>&gt;</mo><mn>1</mn><mo>,</mo><mspace width="0.4em"></mspace><mi>y</mi><mo>&gt;</mo><mn>1</mn></mrow></math>. Получаем <math><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>(</mo><mi>y</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>=</mo><mn>8</mn></mrow></math>. Если <math><mrow><mi>u</mi><mo>=</mo><mi>x</mi><mo>−</mo><mn>1</mn></mrow></math>, <math><mrow><mi>v</mi><mo>=</mo><mi>y</mi><mo>−</mo><mn>1</mn></mrow></math>, то <math><mrow><mi>u</mi><mi>v</mi><mo>=</mo><mn>8</mn></mrow></math> и <math><mrow><mi>u</mi><mo>+</mo><mi>v</mi><mo>=</mo><mn>6</mn></mrow></math>.</p>
+      <p class="answer">Ответ: <math><mrow><mo>(</mo><mn>3</mn><mo>;</mo><mn>5</mn><mo>)</mo></mrow></math> и <math><mrow><mo>(</mo><mn>5</mn><mo>;</mo><mn>3</mn><mo>)</mo></mrow></math>.</p>
+    </div>
+  </section>
+</main>
+</body></html>
