@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Практика №22 — Тождества и формулы приведения</title>
+<style>
+:root { --ink:#19251f; --green:#28584a; --line:#d6e3da; --paper:#fff; --soft:#f1f5f1; }
+* { box-sizing:border-box; }
+body { margin:0; color:var(--ink); background:#f1f3f0; font:17px/1.56 Arial,Helvetica,sans-serif; }
+main { max-width:920px; margin:26px auto 48px; padding:42px 54px 55px; border:1px solid var(--line); border-radius:14px; background:var(--paper); box-shadow:0 12px 32px #1b30200a; }
+.eyebrow { margin:0 0 8px; color:var(--green); font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+h1 { margin:0 0 9px; font-size:32px; line-height:1.18; }
+.intro { margin:0 0 25px; color:#4b5f53; }
+h2 { margin:32px 0 12px; padding:0 0 8px; border-bottom:1px solid var(--line); color:#245144; font-size:21px; line-height:1.3; }
+ol { margin:0; padding-left:2.2em; }
+li { padding:8px 0 9px 4px; border-bottom:1px solid #edf1ed; }
+li::marker { color:var(--green); font-weight:bold; }
+.math { font-family:"Cambria Math","Times New Roman",serif; font-size:1.13em; white-space:nowrap; }
+.frac { display:inline-flex; flex-direction:column; align-items:center; vertical-align:middle; margin:0 .08em; font-size:.93em; line-height:1.08; white-space:nowrap; }
+.frac > span:first-child { display:block; padding:0 .14em .08em; border-bottom:1px solid currentColor; }
+.frac > span:last-child { display:block; padding:.08em .14em 0; }
+@media(max-width:650px) { body { font-size:16px; } main { margin:0; padding:26px 19px 40px; border:0; border-radius:0; box-shadow:none; } h1 { font-size:26px; } h2 { font-size:19px; } ol { padding-left:1.85em; } }
+@media print { @page { size:A4; margin:16mm; } body { background:#fff; font-size:11pt; } main { max-width:none; margin:0; padding:0; border:0; border-radius:0; box-shadow:none; } h1 { font-size:20pt; } h2 { margin-top:6mm; font-size:13pt; break-after:avoid; } li { padding:2mm 0; break-inside:avoid; } }
+</style>
+<link href="../reader.css" rel="stylesheet"><script src="../catalog.js" defer=""></script><script src="../document.js" defer=""></script></head>
+<body><main>
+<p class="eyebrow">Раздел 5 · Основы тригонометрии</p>
+<h1>Практика №22. Тождества и формулы приведения</h1>
+<p class="intro">Тема 5.2 · 42 задания. В заданиях 23–34 считайте, что <span class="math">0 &lt; α &lt; <span class="frac"><span>π</span><span>2</span></span></span>.</p>
+<section><h2>1. Основное тригонометрическое тождество</h2><ol start="1">
+<li>Если <span class="math">sin α = <span class="frac"><span>3</span><span>5</span></span></span> и угол <span class="math">α</span> находится во II четверти, найдите <span class="math">cos α</span>.</li>
+<li>Если <span class="math">cos α = <span class="frac"><span>−5</span><span>13</span></span></span> и угол <span class="math">α</span> находится во II четверти, найдите <span class="math">sin α</span>.</li>
+<li>Если <span class="math">sin α = <span class="frac"><span>−8</span><span>17</span></span></span> и угол <span class="math">α</span> находится в III четверти, найдите <span class="math">cos α</span>.</li>
+<li>Если <span class="math">cos α = <span class="frac"><span>7</span><span>25</span></span></span> и угол <span class="math">α</span> находится в IV четверти, найдите <span class="math">sin α</span>.</li>
+<li>Если <span class="math">sin α = <span class="frac"><span>5</span><span>13</span></span></span> и <span class="math">0 &lt; α &lt; <span class="frac"><span>π</span><span>2</span></span></span>, найдите <span class="math">cos α</span>.</li>
+<li>Если <span class="math">cos α = <span class="frac"><span>−12</span><span>13</span></span></span> и <span class="math">π &lt; α &lt; <span class="frac"><span>3π</span><span>2</span></span></span>, найдите <span class="math">sin α</span>.</li>
+<li>Если <span class="math">sin α = <span class="frac"><span>−3</span><span>5</span></span></span> и <span class="math"><span class="frac"><span>3π</span><span>2</span></span> &lt; α &lt; 2π</span>, найдите <span class="math">cos α</span>.</li>
+<li>Если <span class="math">cos α = <span class="frac"><span>4</span><span>5</span></span></span> и <span class="math"><span class="frac"><span>3π</span><span>2</span></span> &lt; α &lt; 2π</span>, найдите <span class="math">sin α</span>.</li>
+</ol></section>
+<section><h2>2. Тангенс и котангенс</h2><ol start="9">
+<li>Если <span class="math">sin t = <span class="frac"><span>4</span><span>5</span></span></span> и <span class="math"><span class="frac"><span>π</span><span>2</span></span> &lt; t &lt; π</span>, найдите <span class="math">cos t</span>, <span class="math">tg t</span> и <span class="math">ctg t</span>.</li>
+<li>Если <span class="math">cos t = <span class="frac"><span>−3</span><span>5</span></span></span> и <span class="math">π &lt; t &lt; <span class="frac"><span>3π</span><span>2</span></span></span>, найдите <span class="math">sin t</span>, <span class="math">tg t</span> и <span class="math">ctg t</span>.</li>
+<li>Если <span class="math">sin t = <span class="frac"><span>−5</span><span>13</span></span></span> и угол <span class="math">t</span> находится в IV четверти, найдите <span class="math">cos t</span>, <span class="math">tg t</span> и <span class="math">ctg t</span>.</li>
+<li>Если <span class="math">tg t = <span class="frac"><span>3</span><span>4</span></span></span> и угол <span class="math">t</span> находится в III четверти, найдите <span class="math">sin t</span> и <span class="math">cos t</span>.</li>
+<li>Если <span class="math">tg t = <span class="frac"><span>−5</span><span>12</span></span></span> и угол <span class="math">t</span> находится во II четверти, найдите <span class="math">sin t</span> и <span class="math">cos t</span>.</li>
+<li>Укажите, какие из функций <span class="math">sin t</span>, <span class="math">cos t</span>, <span class="math">tg t</span>, <span class="math">ctg t</span> определены при <span class="math">t = 0</span>, <span class="math">t = <span class="frac"><span>π</span><span>2</span></span></span>, <span class="math">t = π</span>.</li>
+</ol></section>
+<section><h2>3. Отрицательные углы и периодичность</h2><ol start="15">
+<li>Выразите <span class="math">sin(−α)</span> через функцию угла <span class="math">α</span>.</li>
+<li>Выразите <span class="math">cos(−α)</span> через функцию угла <span class="math">α</span>.</li>
+<li>Выразите <span class="math">tg(−α)</span> и <span class="math">ctg(−α)</span> через функции угла <span class="math">α</span>.</li>
+<li>Вычислите <span class="math">sin(−<span class="frac"><span>π</span><span>6</span></span>)</span>.</li>
+<li>Вычислите <span class="math">cos(−<span class="frac"><span>π</span><span>3</span></span>)</span>.</li>
+<li>Вычислите <span class="math">sin(<span class="frac"><span>13π</span><span>6</span></span>)</span>.</li>
+<li>Вычислите <span class="math">cos(<span class="frac"><span>11π</span><span>3</span></span>)</span>.</li>
+<li>Вычислите <span class="math">tg(<span class="frac"><span>9π</span><span>4</span></span>)</span>.</li>
+</ol></section>
+<section><h2>4. Формулы приведения</h2><ol start="23">
+<li>Приведите к функции угла <span class="math">α</span>: <span class="math">sin(π − α)</span>. Укажите четверть угла <span class="math">π − α</span> и объясните знак.</li>
+<li>Приведите к функции угла <span class="math">α</span>: <span class="math">cos(π − α)</span>. Укажите четверть и объясните знак.</li>
+<li>Приведите к функции угла <span class="math">α</span>: <span class="math">sin(π + α)</span>. Укажите четверть и объясните знак.</li>
+<li>Приведите к функции угла <span class="math">α</span>: <span class="math">cos(2π − α)</span>. Укажите четверть и объясните знак.</li>
+<li>Приведите к функции угла <span class="math">α</span>: <span class="math">sin(<span class="frac"><span>π</span><span>2</span></span> + α)</span>. Укажите четверть и объясните, меняется ли название функции.</li>
+<li>Приведите к функции угла <span class="math">α</span>: <span class="math">cos(<span class="frac"><span>π</span><span>2</span></span> + α)</span>. Укажите четверть и объясните знак.</li>
+<li>Приведите к функции угла <span class="math">α</span>: <span class="math">tg(<span class="frac"><span>3π</span><span>2</span></span> − α)</span>. Укажите четверть и объясните, меняется ли название функции.</li>
+<li>Приведите к функции угла <span class="math">α</span>: <span class="math">ctg(<span class="frac"><span>3π</span><span>2</span></span> + α)</span>. Укажите четверть и объясните знак.</li>
+<li>Вычислите <span class="math">sin(<span class="frac"><span>5π</span><span>6</span></span>)</span>.</li>
+<li>Вычислите <span class="math">cos(<span class="frac"><span>7π</span><span>6</span></span>)</span>.</li>
+<li>Вычислите <span class="math">tg(<span class="frac"><span>5π</span><span>4</span></span>)</span>.</li>
+<li>Вычислите <span class="math">cos(<span class="frac"><span>11π</span><span>6</span></span>)</span>.</li>
+</ol></section>
+<section><h2>5. Смешанные задания</h2><ol start="35">
+<li>Вычислите <span class="math">sin(−<span class="frac"><span>π</span><span>6</span></span>) + cos(−<span class="frac"><span>π</span><span>3</span></span>)</span>.</li>
+<li>Упростите <span class="math">sin(π − α) + sin(π + α)</span>, если <span class="math">0 &lt; α &lt; <span class="frac"><span>π</span><span>2</span></span></span>.</li>
+<li>Упростите <span class="math">cos(π − α) + cos(2π − α)</span>, если <span class="math">0 &lt; α &lt; <span class="frac"><span>π</span><span>2</span></span></span>.</li>
+<li>Упростите <span class="math">sin(<span class="frac"><span>π</span><span>2</span></span> + α) − cos α</span>, если <span class="math">0 &lt; α &lt; <span class="frac"><span>π</span><span>2</span></span></span>.</li>
+<li>Упростите <span class="math">sin²(π − α) + cos²(π − α)</span>, если <span class="math">0 &lt; α &lt; <span class="frac"><span>π</span><span>2</span></span></span>.</li>
+<li>Если <span class="math">sin α = <span class="frac"><span>3</span><span>5</span></span></span> и угол <span class="math">α</span> находится во II четверти, найдите <span class="math">cos(π − α)</span>.</li>
+<li>Если <span class="math">cos α = <span class="frac"><span>−4</span><span>5</span></span></span> и угол <span class="math">α</span> находится в III четверти, найдите <span class="math">sin(2π − α)</span>.</li>
+<li>Если <span class="math">sin α = <span class="frac"><span>5</span><span>13</span></span></span> и угол <span class="math">α</span> находится в I четверти, найдите <span class="math">tg(<span class="frac"><span>π</span><span>2</span></span> + α)</span>.</li>
+</ol></section>
+</main>
+</body></html>
